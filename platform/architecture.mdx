@@ -1,0 +1,67 @@
+---
+title: "Arquitetura"
+description: "Mapa conceitual da arquitetura do CapyUniverse."
+---
+
+A arquitetura recomendada para o CapyUniverse segue três camadas principais: **interface**, **serviços IA** e **dados/estado**.
+
+```txt
+Usuário
+  ↓
+Interface Web / CapyTool
+  ↓
+Validação e preparação de entrada
+  ↓
+Serviço de IA ou serviço local
+  ↓
+Pós-processamento
+  ↓
+Resposta visual / arquivo / ação
+  ↓
+Histórico local ou persistência futura
+```
+
+## Camada de interface
+
+Responsável por:
+
+- apresentar cada CapyTool;
+- capturar entradas do usuário;
+- validar campos básicos;
+- exibir resultados;
+- manter navegação simples entre ferramentas.
+
+## Camada de serviços
+
+Responsável por:
+
+- encapsular chamadas para Gemini, OpenAI ou outros provedores;
+- preparar prompts;
+- tratar erros de rede, limite e autenticação;
+- normalizar respostas;
+- isolar lógica de IA da interface.
+
+## Camada de dados e estado
+
+Responsável por:
+
+- estado temporário da sessão;
+- cache local;
+- histórico de uso;
+- IndexedDB ou LocalStorage quando fizer sentido;
+- futura integração com banco, backend ou vetor de memória.
+
+## Direção arquitetural
+
+| Área | Agora | Evolução recomendada |
+| --- | --- | --- |
+| Interface | Páginas/ferramentas web | Router unificado e catálogo de módulos |
+| IA | Chamadas por ferramenta | Camada comum de provedores e prompts |
+| Estado | Local e simples | Context manager por ferramenta |
+| Persistência | Browser storage | Backend opcional e banco por produto |
+| Documentação | Repositório separado | Docs conectada ao catálogo dos projetos |
+| Qualidade | Manual | Testes, checklist e CI/CD |
+
+<Warning>
+  O maior risco arquitetural é crescer como um conjunto de páginas isoladas. O CapyUniverse precisa de padrão de módulo para continuar escalável.
+</Warning>

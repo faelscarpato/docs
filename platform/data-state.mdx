@@ -1,0 +1,41 @@
+---
+title: "Dados e estado"
+description: "Como pensar armazenamento local, histórico, memória e persistência futura."
+---
+
+O CapyUniverse deve priorizar uma abordagem **local-first** sempre que possível. Isso facilita prototipação, testes e uso sem infraestrutura pesada.
+
+## Camadas de dados
+
+| Camada | Uso recomendado |
+| --- | --- |
+| Estado em memória | Sessões rápidas, formulários e respostas temporárias |
+| LocalStorage | Preferências simples e flags |
+| IndexedDB | Histórico, arquivos leves, cache e dados estruturados |
+| JSON local | Catálogos, presets, dados de exemplo e templates |
+| Backend futuro | Multiusuário, sincronização, permissões e dados sensíveis |
+| Vector store futuro | Busca semântica e memória de agentes |
+
+## Regra de decisão
+
+```txt
+Dado é temporário? Use memória.
+É configuração simples? Use LocalStorage.
+É histórico ou coleção? Use IndexedDB.
+É dado compartilhado entre usuários? Use backend.
+É contexto para IA recuperar? Use knowledge base/vector store.
+```
+
+## Atenção a dados sensíveis
+
+<Warning>
+  Documentos, chaves, dados pessoais, relatórios internos e prompts estratégicos não devem ser gravados sem regra clara de privacidade, retenção e backup.
+</Warning>
+
+## Evolução recomendada
+
+1. Padronizar storage por ferramenta.
+2. Criar camada comum de persistência local.
+3. Adicionar exportação/importação de dados.
+4. Adicionar login apenas para produtos que precisam.
+5. Criar backend por produto quando o uso comercial exigir sincronização.

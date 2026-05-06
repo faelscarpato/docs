@@ -1,34 +1,36 @@
-> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
+# Contribuindo com CapyUniverse Docs
 
-# Contribute to the documentation
+## Antes de editar
 
-Thank you for your interest in contributing to our documentation! This guide will help you get started.
+Identifique se a alteração é:
 
-## How to contribute
+- documentação da plataforma;
+- documentação de agente;
+- documentação de projeto filho;
+- padrão técnico;
+- governança;
+- template ou glossário.
 
-### Option 1: Edit directly on GitHub
+## Como adicionar uma página
 
-1. Navigate to the page you want to edit
-2. Click the "Edit this file" button (the pencil icon)
-3. Make your changes and submit a pull request
+1. Crie o arquivo `.mdx` na pasta correta.
+2. Adicione frontmatter com `title` e `description`.
+3. Inclua a página no `docs.json` se ela for oficial.
+4. Rode validação local.
+5. Verifique se não há conteúdo antigo do template.
 
-### Option 2: Local development
+## Como escrever
 
-1. Fork and clone this repository
-2. Install the Mintlify CLI: `npm i -g mint`
-3. Create a branch for your changes
-4. Make changes
-5. Navigate to the docs directory and run `mint dev`
-6. Preview your changes at `http://localhost:3000`
-7. Commit your changes and submit a pull request
+- Use frases diretas.
+- Liste limitações sem esconder problemas.
+- Não prometa funcionalidades que ainda não existem.
+- Use tabelas para comparação, risco e roadmap.
+- Registre fonte do projeto quando possível.
 
-For more details on local development, see our [development guide](development.mdx).
+## Checklist de PR
 
-## Writing guidelines
-
-- **Use active voice**: "Run the command" not "The command should be run"
-- **Address the reader directly**: Use "you" instead of "the user"
-- **Keep sentences concise**: Aim for one idea per sentence
-- **Lead with the goal**: Start instructions with what the user wants to accomplish
-- **Use consistent terminology**: Don't alternate between synonyms for the same concept
-- **Include examples**: Show, don't just tell
+- [ ] `docs.json` válido.
+- [ ] Links testados.
+- [ ] Nenhum segredo no conteúdo.
+- [ ] Nenhum conteúdo do starter Mintlify.
+- [ ] Página segue padrão de projeto/agente quando aplicável.

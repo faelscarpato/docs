@@ -1,68 +1,104 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "CapyUniverse Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#7C3AED",
+    "light": "#22D3EE",
+    "dark": "#A78BFA"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Comece aqui",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Visão geral",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Plataforma",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "platform/overview",
+              "platform/architecture",
+              "platform/local-setup",
+              "platform/capytool-standard",
+              "platform/ai-providers",
+              "platform/data-state"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Agentes IA",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Sistema de agentes",
             "pages": [
-              "api-reference/introduction"
+              "agents/overview",
+              "agents/infographics",
+              "agents/engineering",
+              "agents/rendering",
+              "agents/documentation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Projetos filhos",
+        "groups": [
+          {
+            "group": "Catálogo do ecossistema",
+            "pages": [
+              "projects/overview",
+              "projects/capyuniverse-core",
+              "projects/valerepor",
+              "projects/bicou",
+              "projects/capymind",
+              "projects/buskacep",
+              "projects/sentinela-pedreira"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Desenvolvimento",
+        "groups": [
+          {
+            "group": "Trabalho técnico",
+            "pages": [
+              "development/standards",
+              "development/contributing",
+              "development/deploy"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Governança",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "governance/roadmap",
+              "governance/security",
+              "governance/quality-checklist"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Referência",
+        "groups": [
+          {
+            "group": "Padrões e glossário",
+            "pages": [
+              "reference/glossary",
+              "reference/project-template",
+              "reference/agent-template"
             ]
           }
         ]
@@ -71,52 +107,50 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "CapyUniverse",
+          "href": "https://github.com/faelscarpato/capyuniverse",
+          "icon": "sparkles"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Portfólio",
+          "href": "https://faelscarpato.github.io/",
+          "icon": "globe"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "GitHub",
+        "href": "https://github.com/faelscarpato/capyuniverse"
+      },
+      {
+        "label": "Demo",
+        "href": "https://faelscarpato.github.io/capyuniverse/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Abrir Universo",
+      "href": "https://faelscarpato.github.io/capyuniverse/"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/faelscarpato"
     }
   }
 }

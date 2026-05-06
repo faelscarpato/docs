@@ -1,0 +1,48 @@
+---
+title: "Visão geral dos agentes"
+description: "Como os agentes IA se organizam dentro do CapyUniverse."
+---
+
+Agentes IA são funções especializadas do ecossistema. Cada agente deve ter uma responsabilidade clara, um prompt mestre, entradas esperadas, saídas padronizadas e limites de uso.
+
+## Tipos de agentes
+
+| Agente | Função principal |
+| --- | --- |
+| Agente de Infográficos | Transformar repositórios, temas ou produtos em imagens explicativas |
+| Agente de Engenharia | Analisar projetos, arquitetura, riscos e plano técnico |
+| Agente de Renderização | Criar prompts e pranchas visuais para engenharia, arquitetura e materiais comerciais |
+| Agente de Documentação | Criar, revisar e manter documentação dos projetos |
+
+## Padrão de agente
+
+Todo agente deve declarar:
+
+- missão;
+- tipo de entrada;
+- processo de análise;
+- formato de saída;
+- restrições;
+- critérios de qualidade;
+- exemplos de uso;
+- riscos e limites.
+
+## Fluxo recomendado
+
+```txt
+Usuário solicita tarefa
+  ↓
+CapyUniverse identifica agente adequado
+  ↓
+Agente carrega prompt mestre e contexto
+  ↓
+Executa tarefa
+  ↓
+Entrega saída padronizada
+  ↓
+Documenta aprendizado quando necessário
+```
+
+<Note>
+  Um agente não precisa ser uma IA separada. Ele pode ser uma combinação de prompt, interface, regras e contexto dentro do CapyUniverse.
+</Note>

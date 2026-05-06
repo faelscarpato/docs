@@ -1,0 +1,50 @@
+---
+title: "Provedores de IA"
+description: "Como organizar integrações com Gemini, OpenAI e outros modelos."
+---
+
+O CapyUniverse deve tratar provedores de IA como **serviços substituíveis**, não como lógica espalhada em cada página.
+
+## Padrão recomendado
+
+```txt
+CapyTool
+  ↓
+Prompt builder
+  ↓
+AI service comum
+  ↓
+Provider adapter
+  ↓
+Gemini / OpenAI / outro
+```
+
+## Regras
+
+- Chaves ficam em variáveis de ambiente.
+- Prompts importantes devem ter versão.
+- Cada agente deve declarar modelo preferido, temperatura e formato de saída.
+- Respostas devem passar por pós-processamento quando tiverem estrutura esperada.
+- Erros de API precisam virar mensagens compreensíveis para o usuário.
+
+## Exemplo de contrato interno
+
+```ts
+export type AIRequest = {
+  provider: "gemini" | "openai" | "local";
+  systemPrompt: string;
+  userInput: string;
+  temperature?: number;
+  outputFormat?: "text" | "json" | "markdown";
+};
+```
+
+## Riscos
+
+| Risco | Mitigação |
+| --- | --- |
+| Custo inesperado | Limites por ferramenta e logs de consumo |
+| Resposta inconsistente | Prompts versionados e critérios de aceite |
+| Vazamento de chave | `.env`, secrets e revisão de commits |
+| Dependência de provedor único | Adapter comum e fallback planejado |
+| Alucinação | Validação, disclaimers e fontes quando necessário |

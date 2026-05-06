@@ -1,0 +1,54 @@
+---
+title: "BuskaCEP"
+description: "Utilitário local para consulta dos novos CEPs de Pedreira-SP."
+---
+
+## Resumo
+
+BuskaCEP é uma aplicação web para consultar novos CEPs de Pedreira-SP por rua, bairro ou CEP.
+
+## Papel dentro do CapyUniverse
+
+É um exemplo de **produto utilitário local**, criado para resolver um problema concreto da cidade. Pode servir como modelo para outras ferramentas públicas de consulta rápida.
+
+## Funcionalidades documentadas
+
+- Busca client-side com normalização de acentos.
+- Layout responsivo.
+- Lista-first no mobile.
+- Mapa sticky no desktop.
+- Overlay de mapa no resultado ativo.
+- Ações de copiar CEP e abrir no Google Maps.
+- Bottom sheet mobile.
+- Geocodificação sob demanda.
+- Filtros rápidos por bairro.
+- Toast de confirmação.
+- Base local `public/ceps.json`.
+
+## Stack observada
+
+- Vite.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Base local JSON.
+
+## Risco técnico
+
+<Warning>
+  A geocodificação sob demanda precisa de cuidado em produção. A evolução recomendada é proxy/backend com cache persistente, identificação adequada e rate limiting.
+</Warning>
+
+## Evolução recomendada
+
+1. Criar página de origem dos dados.
+2. Criar versão offline/PWA.
+3. Adicionar analytics de buscas sem resultado.
+4. Criar painel de atualização da base.
+5. Reaproveitar como template para outras cidades.
+
+## Fonte do projeto
+
+<Card title="Repositório BuskaCEP" icon="github" href="https://github.com/faelscarpato/buskacep" horizontal>
+  Aplicação de consulta de CEPs por rua, bairro ou CEP.
+</Card>

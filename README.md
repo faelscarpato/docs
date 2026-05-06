@@ -1,55 +1,75 @@
-# Mintlify Starter Kit
+# CapyUniverse Docs
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentação oficial do ecossistema **CapyUniverse**: plataforma-mãe para ferramentas, agentes IA e projetos filhos como ValeRepor, Bicou, CapyMind, BuskaCEP e Sentinela Pedreira.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Objetivo
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Transformar o antigo starter Mintlify em uma documentação real para organizar:
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- visão geral do CapyUniverse;
+- arquitetura da plataforma;
+- padrão de CapyTools;
+- agentes especializados;
+- projetos filhos;
+- governança, segurança e roadmap;
+- templates de documentação.
 
-## AI-assisted writing
+## Como rodar localmente
 
-Set up your AI coding tool to work with Mintlify:
+Instale a CLI do Mintlify:
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Rode a documentação:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Acesse:
 
-## Publishing changes
+```bash
+http://localhost:3000
+```
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Estrutura
 
-## Need help?
+```txt
+capyuniverse-docs/
+├── docs.json
+├── index.mdx
+├── quickstart.mdx
+├── platform/
+├── agents/
+├── projects/
+├── development/
+├── governance/
+├── reference/
+├── logo/
+└── .github/workflows/
+```
 
-### Troubleshooting
+## Projetos documentados
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+- CapyUniverse Core
+- ValeRepor
+- Bicou
+- CapyMind
+- BuskaCEP
+- Sentinela Pedreira
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Checklist antes de publicar
+
+- [ ] Revisar nome, links e branding.
+- [ ] Confirmar se todos os projetos filhos continuam atualizados.
+- [ ] Rodar validação local.
+- [ ] Remover conteúdos antigos ou temporários.
+- [ ] Publicar no repositório definitivo.
+
+## Links úteis
+
+- CapyUniverse: https://github.com/faelscarpato/capyuniverse
+- Demo: https://faelscarpato.github.io/capyuniverse/
+- Perfil GitHub: https://github.com/faelscarpato

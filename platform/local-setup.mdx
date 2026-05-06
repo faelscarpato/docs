@@ -1,0 +1,57 @@
+---
+title: "Rodando localmente"
+description: "Como preparar o ambiente local do CapyUniverse e da documentação."
+---
+
+## CapyUniverse
+
+Use este fluxo no repositório principal do CapyUniverse:
+
+```bash
+npm install
+npm run dev
+```
+
+Variáveis comuns:
+
+```bash
+VITE_GEMINI_API_KEY=
+VITE_OPENAI_API_KEY=
+```
+
+<Warning>
+  Nunca suba chaves reais para o GitHub. Use `.env.local` ou arquivo equivalente ignorado pelo Git.
+</Warning>
+
+## Documentação Mintlify
+
+Use este fluxo na pasta da documentação:
+
+```bash
+npm i -g mint
+mint dev
+```
+
+A documentação local costuma abrir em:
+
+```bash
+http://localhost:3000
+```
+
+## Checklist local
+
+- O `docs.json` está válido.
+- Todas as páginas citadas na navegação existem.
+- Nenhuma página mantém conteúdo de starter/template.
+- Links externos apontam para projetos reais.
+- Páginas de projetos filhos têm objetivo, stack, status e próximos passos.
+
+## Fluxo sugerido de trabalho
+
+```txt
+1. Criar ou atualizar módulo no CapyUniverse
+2. Documentar objetivo e uso na docs
+3. Registrar riscos e roadmap
+4. Revisar links e navegação
+5. Subir PR ou commit versionado
+```

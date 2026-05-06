@@ -1,33 +1,39 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# AGENTS.md — CapyUniverse Docs
 
-# Documentation project instructions
+Este repositório contém a documentação oficial do ecossistema CapyUniverse.
 
-## About this project
+## Missão dos agentes
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+Qualquer agente que edite este repositório deve manter a documentação clara, rastreável e alinhada com o conceito de plataforma-mãe.
 
-## Terminology
+## Regras obrigatórias
 
-<!-- Add product-specific terms and preferred usage -->
-<!-- Example: Use "workspace" not "project", "member" not "user" -->
+1. Não transformar ideias futuras em funcionalidades atuais.
+2. Não inventar stack, módulos ou integrações.
+3. Separar claramente: atual, planejado, recomendado e risco.
+4. Não publicar chaves de API, tokens, segredos ou dados sensíveis.
+5. Não deixar conteúdo de starter/template genérico.
+6. Manter português claro e direto.
+7. Atualizar `docs.json` quando criar página oficial.
+8. Usar os templates em `reference/` para novos projetos e agentes.
 
-## Style preferences
+## Estrutura oficial
 
-<!-- Add any project-specific style rules below -->
+- `platform/`: documentação da plataforma-mãe.
+- `agents/`: documentação dos agentes IA.
+- `projects/`: documentação dos projetos filhos.
+- `development/`: padrões técnicos e contribuição.
+- `governance/`: segurança, qualidade e roadmap.
+- `reference/`: glossário e templates.
 
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+## Critério de qualidade
 
-## Content boundaries
+Cada página nova deve responder:
 
-<!-- Define what should and shouldn't be documented -->
-<!-- Example: Don't document internal admin features -->
+- O que é?
+- Para quem é?
+- Qual problema resolve?
+- O que existe hoje?
+- O que ainda é roadmap?
+- Quais riscos existem?
+- Qual o próximo passo?

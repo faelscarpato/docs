@@ -1,0 +1,39 @@
+---
+title: "Segurança"
+description: "Regras mínimas de segurança para projetos, agentes e integrações IA."
+---
+
+## Princípios
+
+- Não commitar chaves de API.
+- Não publicar dados sensíveis sem curadoria.
+- Separar demonstração de produção.
+- Validar entrada de usuário.
+- Explicar limites de respostas geradas por IA.
+- Registrar fontes quando houver análise documental.
+
+## Riscos por tipo de projeto
+
+| Projeto | Risco principal | Mitigação |
+| --- | --- | --- |
+| CapyUniverse Core | Chaves IA no frontend | `.env`, proxy futuro e limites de uso |
+| ValeRepor | Perda de dados locais | Backup, exportação e backend futuro |
+| Bicou | Dados pessoais e pagamento | Autenticação, termos, antifraude e compliance |
+| CapyMind | Conteúdo sensível em base de conhecimento | Classificação e política de acesso |
+| BuskaCEP | Rate limit/geocoding | Cache e proxy backend |
+| Sentinela Pedreira | Interpretação pública incorreta | Fontes, datas, revisão humana e metodologia |
+
+## Checklist de segurança para nova CapyTool
+
+- [ ] Usa chave externa?
+- [ ] A chave fica fora do código?
+- [ ] Processa arquivo do usuário?
+- [ ] Armazena algum dado?
+- [ ] Pode gerar conclusão incorreta?
+- [ ] Precisa de aviso ou limite?
+- [ ] Precisa de log?
+- [ ] Precisa de exclusão de dados?
+
+<Warning>
+  Ferramentas com IA podem parecer corretas mesmo quando erram. Para temas jurídicos, cívicos, financeiros, saúde ou engenharia, a documentação deve declarar limites e necessidade de revisão humana.
+</Warning>

@@ -1,0 +1,48 @@
+---
+title: "Padrões de desenvolvimento"
+description: "Regras técnicas para manter o ecossistema CapyUniverse organizado."
+---
+
+## Objetivo
+
+Estabelecer um padrão mínimo para que novas ferramentas, agentes e projetos filhos cresçam sem virar um conjunto desorganizado de páginas.
+
+## Padrões gerais
+
+| Área | Regra |
+| --- | --- |
+| Nomes | Usar nomes curtos, claros e consistentes |
+| Módulos | Cada módulo deve ter objetivo e dono lógico |
+| Prompts | Prompts mestres devem ser versionados |
+| Variáveis | Segredos sempre em `.env` ou secrets |
+| Estado | Evitar lógica de storage espalhada |
+| UI | Reutilizar componentes e tokens visuais |
+| Docs | Toda ferramenta relevante precisa de página |
+
+## Padrão de branch/commit sugerido
+
+```txt
+feat/capytool-nome
+fix/nome-do-ajuste
+docs/projeto-ou-agente
+refactor/camada-afetada
+```
+
+Commits:
+
+```txt
+feat: adiciona CapyOCR ao catálogo
+fix: corrige validação de chave Gemini
+docs: documenta fluxo do ValeRepor
+refactor: isola serviço de IA
+```
+
+## Critério de pronto
+
+Um módulo só deve ser considerado pronto quando tiver:
+
+- fluxo principal funcionando;
+- estado de erro tratado;
+- documentação mínima;
+- riscos conhecidos listados;
+- próximos passos registrados.

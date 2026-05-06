@@ -1,0 +1,82 @@
+---
+title: "ValeRepor"
+description: "Produto filho para controle de validade e reposição de produtos em supermercados."
+---
+
+## Resumo
+
+ValeRepor é um sistema PWA/offline para controle de validade e reposição de produtos em supermercados.
+
+## Papel dentro do CapyUniverse
+
+É o primeiro produto comercial recomendado para amadurecimento, porque resolve uma dor simples, concreta e fácil de vender: evitar perdas por vencimento e organizar reposição de prateleira.
+
+## Usuários
+
+- Dono de supermercado.
+- Gerente de loja.
+- Repositor.
+- Encarregado de setor.
+- Equipe de controle de validade.
+
+## Funcionalidades documentadas
+
+- Cadastro e edição de produtos.
+- Cadastro e edição de setores/prateleiras.
+- Cadastro de reposição com lote.
+- Alerta padrão 30 dias antes do vencimento.
+- Edição de reposições pela tela de alertas.
+- Validações de quantidade e datas.
+- Bloqueio de exclusão quando há reposições vinculadas.
+- Histórico de ações por status.
+- Relatórios por lote, status e setor.
+- Backup JSON, importação, limpeza local e dados de exemplo.
+- Service worker com cache básico para modo offline após primeiro carregamento.
+
+## Stack observada
+
+- Vite.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- PWA.
+- Service worker.
+- LocalStorage.
+
+## Limitação atual
+
+<Warning>
+  A versão atual salva dados no dispositivo via LocalStorage. Para uso comercial real, a evolução recomendada é backend, banco de dados, login, sincronização e política de backup.
+</Warning>
+
+## Evolução recomendada
+
+| Etapa | Objetivo |
+| --- | --- |
+| Multiusuário | Separar operador, gerente e administrador |
+| Backend | Sincronizar dados entre dispositivos |
+| Banco de dados | Persistência confiável por loja |
+| Alertas inteligentes | Notificações por setor, lote e criticidade |
+| Relatórios gerenciais | Perdas evitadas, produtos críticos e rotina de validade |
+| Modo rede de lojas | Unificar várias unidades |
+
+## Documentação própria recomendada
+
+```txt
+ValeRepor
+├── O que é
+├── Instalação PWA
+├── Cadastro de produtos
+├── Cadastro de setores
+├── Registrar reposição
+├── Entender alertas
+├── Relatórios
+├── Backup e restauração
+└── Roadmap comercial
+```
+
+## Fonte do projeto
+
+<Card title="Repositório ValeRepor" icon="github" href="https://github.com/faelscarpato/valerepor" horizontal>
+  Projeto PWA/offline para controle de validade e reposição.
+</Card>

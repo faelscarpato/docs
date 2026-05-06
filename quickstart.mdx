@@ -1,80 +1,72 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Comece aqui"
+description: "O caminho inicial para entender, rodar e expandir o CapyUniverse."
 ---
 
-## Get started in three steps
+Este guia mostra como pensar o CapyUniverse como **base local dos seus projetos**.
 
-Get your documentation site running locally and make your first customization.
+<Steps>
+  <Step title="Entenda a função do CapyUniverse">
+    O CapyUniverse não é apenas um site com várias páginas. Ele é o **hub central** onde cada página, ferramenta ou agente representa uma função específica dentro de um universo maior.
+  </Step>
+  <Step title="Rode o projeto localmente">
+    Use o fluxo padrão do projeto principal:
 
-### Step 1: Set up your local environment
+    ```bash
+    npm install
+    npm run dev
+    ```
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+    Depois configure as variáveis necessárias no `.env`, como chaves de provedores IA quando forem usadas.
+  </Step>
+  <Step title="Escolha um tipo de módulo">
+    Cada nova ideia deve entrar em uma das categorias:
 
-### Step 2: Deploy your changes
+    - **CapyTool:** ferramenta funcional.
+    - **Agente:** IA com papel especializado.
+    - **Produto filho:** projeto com público, problema e roadmap próprios.
+    - **Experimento:** protótipo em validação.
+  </Step>
+  <Step title="Documente antes de crescer">
+    Antes de criar muitas páginas, registre objetivo, entrada, saída, dependências, riscos e critérios de aceite do módulo.
+  </Step>
+</Steps>
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+## Estrutura mental do universo
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+```txt
+CapyUniverse
+├── Plataforma Core
+│   ├── Interface principal
+│   ├── Navegação
+│   ├── Serviços IA
+│   └── Estado local
+├── CapyTools
+│   ├── CapyOCR
+│   ├── CapyPDF
+│   ├── CapyPlanner
+│   └── Novas ferramentas
+├── Agentes
+│   ├── Engenharia
+│   ├── Infográficos
+│   ├── Renderização
+│   └── Documentação
+└── Projetos filhos
+    ├── ValeRepor
+    ├── Bicou
+    ├── CapyMind
+    ├── BuskaCEP
+    └── Sentinela Pedreira
+```
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+## Decisão prática
 
-### Step 3: Go live
+<Tip>
+  Sempre que surgir uma nova ideia, pergunte: isso é uma ferramenta, um agente, um produto filho ou apenas um experimento? Essa decisão evita bagunça no ecossistema.
+</Tip>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+## Próximo passo recomendado
 
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="Ler a arquitetura" icon="sitemap" href="/platform/architecture" horizontal>
+  Entenda a divisão entre interface, serviços de IA e camada de dados antes de criar novas ferramentas.
 </Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

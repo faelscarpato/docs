@@ -1,0 +1,27 @@
+# CapyUniverse Docs
+
+CapyUniverse é o hub local de ferramentas, agentes IA e projetos filhos de Rafael Scarpato.
+
+## Páginas principais
+
+- / — Visão geral do CapyUniverse Docs
+- /quickstart — Comece aqui
+- /platform/overview — Visão geral da plataforma
+- /platform/architecture — Arquitetura
+- /platform/capytool-standard — Padrão de CapyTool
+- /agents/overview — Sistema de agentes IA
+- /projects/overview — Catálogo de projetos filhos
+- /projects/valerepor — Produto ValeRepor
+- /projects/bicou — Produto Bicou
+- /projects/capymind — Knowledge pack CapyMind
+- /projects/buskacep — BuskaCEP
+- /projects/sentinela-pedreira — Sentinela Pedreira
+- /governance/security — Segurança
+- /governance/quality-checklist — Checklist de qualidade
+
+## Regras para agentes
+
+- Não inventar funcionalidades.
+- Separar status atual de roadmap.
+- Usar português do Brasil.
+- Tratar CapyUniverse como plataforma-mãe e não como produto isolado.

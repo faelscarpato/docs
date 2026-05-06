@@ -1,0 +1,58 @@
+---
+title: "Deploy"
+description: "Como publicar e manter a documentação do CapyUniverse."
+---
+
+## Opção recomendada
+
+Usar o fluxo padrão do Mintlify conectado ao GitHub:
+
+```txt
+Repositório de docs
+  ↓
+Commit / Pull Request
+  ↓
+Validação
+  ↓
+Deploy automático
+  ↓
+Documentação publicada
+```
+
+## Validações recomendadas
+
+- JSON válido no `docs.json`.
+- Páginas da navegação existem.
+- Links não quebrados.
+- Nenhum texto antigo do starter.
+- Nenhuma chave ou segredo.
+- Markdown/MDX renderiza corretamente.
+
+## Workflow sugerido
+
+Este pacote já inclui um workflow inicial em:
+
+```txt
+.github/workflows/docs-check.yml
+```
+
+Ele valida:
+
+- JSON;
+- presença de arquivos navegados;
+- termos proibidos do starter;
+- estrutura mínima.
+
+## Ambientes sugeridos
+
+| Ambiente | Uso |
+| --- | --- |
+| Local | Escrita e preview |
+| Preview/PR | Revisão antes do merge |
+| Produção | Documentação oficial |
+
+## Cuidados
+
+<Warning>
+  Não publique a documentação como oficial antes de revisar os conteúdos dos projetos filhos. Algumas páginas registram estado atual e roadmap, não funcionalidades finais.
+</Warning>
