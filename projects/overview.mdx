@@ -1,36 +1,45 @@
 ---
 title: "Catálogo de projetos filhos"
-description: "Mapa dos projetos conectados ao ecossistema CapyUniverse."
+description: "Mapa dos projetos conectados ao ecossistema CapyUniverse, com status, papel e fontes canônicas."
+icon: "boxes-stacked"
+keywords: ["capyuniverse", "projetos", "catálogo", "ecossistema"]
 ---
 
-Os projetos filhos são produtos, utilitários, bases de conhecimento ou plataformas conectadas ao CapyUniverse.
+Os projetos filhos são produtos, utilitários, bases de conhecimento ou plataformas conectadas ao CapyUniverse. Esta página separa **estado verificado**, **maturidade editorial** e **lacunas conhecidas** para evitar que ideias de roadmap sejam confundidas com recursos prontos.
 
-## Mapa atual
+## Matriz atual
 
-| Projeto | Papel no universo | Status documental |
-| --- | --- | --- |
-| CapyUniverse Core | Plataforma-mãe e hub local | Principal |
-| ValeRepor | Produto comercial para supermercados | Prioridade alta |
-| Bicou | Marketplace/protótipo de bicos rápidos | Prioridade média/alta |
-| CapyMind | Knowledge pack e memória documental | Prioridade alta |
-| BuskaCEP | Utilitário cívico/local para CEPs de Pedreira-SP | Prioridade média |
-| Sentinela Pedreira | Inteligência cívica municipal | Prioridade média/alta |
+| Projeto | Papel no universo | Status | Maturidade | Fonte principal |
+| --- | --- | --- | --- | --- |
+| [CapyUniverse Core](/projects/capyuniverse-core) | Plataforma-mãe e hub experimental | Experimental | Exploratória | README + arquitetura |
+| [ValeRepor](/projects/valerepor) | Produto operacional para supermercados | Em evolução | Protótipo funcional | README + Cloudflare Pages |
+| [Bicou](/projects/bicou) | Protótipo de fluxo de bicos rápidos | Demo | Protótipo funcional | README + teste manual |
+| [CapyMind](/projects/capymind) | Knowledge pack e memória documental | Ativo | Operacional | README + scripts |
+| [BuskaCEP](/projects/buskacep) | Utilitário local de CEPs de Pedreira-SP | Ativo | Protótipo vertical | README + package |
+| [Sentinela Pedreira](/projects/sentinela-pedreira) | Inteligência cívica municipal | Em evolução | Avançada | README + arquitetura + setup |
 
 ## Critério de classificação
 
 | Tipo | Quando usar |
 | --- | --- |
-| Plataforma | Centraliza outros projetos ou módulos |
+| Plataforma | Centraliza outros projetos, módulos ou agentes |
 | Produto comercial | Tem cliente, dor e proposta vendável |
 | Utilitário público | Resolve problema local ou comunitário |
 | Knowledge base | Organiza conhecimento para humanos e IA |
 | Laboratório | Testa tecnologia, UX ou automação |
 
-## Prioridade recomendada
+## Regra documental
 
-1. **CapyUniverse Core:** precisa ser a base conceitual e técnica.
-2. **CapyMind:** ajuda a organizar conhecimento, contexto e governança.
-3. **ValeRepor:** primeiro produto comercial claro.
-4. **Bicou:** produto estratégico, mas com riscos jurídicos/operacionais maiores.
-5. **Sentinela Pedreira:** projeto público com impacto, exige curadoria e responsabilidade.
-6. **BuskaCEP:** utilitário prático e bom exemplo de produto local.
+Cada página de projeto deve responder:
+
+- O que é o projeto na prática.
+- Qual papel ele ocupa dentro do CapyUniverse.
+- O que existe hoje, com base no repositório público.
+- Qual stack foi verificada.
+- Como rodar, quando o repositório informa.
+- Quais limitações e riscos estão explícitos.
+- O que ainda não foi fornecido.
+
+<Note>
+  Quando uma informação não aparece nas fontes públicas consultadas, a página deve registrar **INFORMAÇÃO NÃO FORNECIDA** em vez de completar a lacuna por inferência.
+</Note>

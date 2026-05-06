@@ -1,75 +1,37 @@
 # CapyUniverse Docs
 
-Documentação oficial do ecossistema **CapyUniverse**: plataforma-mãe para ferramentas, agentes IA e projetos filhos como ValeRepor, Bicou, CapyMind, BuskaCEP e Sentinela Pedreira.
+Documentação oficial do ecossistema CapyUniverse, construída com Mintlify.
 
 ## Objetivo
 
-Transformar o antigo starter Mintlify em uma documentação real para organizar:
+Transformar o CapyUniverse em uma plataforma-mãe documentada para organizar:
 
-- visão geral do CapyUniverse;
-- arquitetura da plataforma;
-- padrão de CapyTools;
-- agentes especializados;
+- CapyUniverse Core;
+- agentes IA;
 - projetos filhos;
-- governança, segurança e roadmap;
-- templates de documentação.
+- padrões técnicos;
+- roadmap;
+- governança editorial;
+- conteúdo AI-ready via `llms.txt`.
 
 ## Como rodar localmente
 
-Instale a CLI do Mintlify:
-
 ```bash
 npm i -g mint
-```
-
-Rode a documentação:
-
-```bash
 mint dev
 ```
 
-Acesse:
+## Principais mudanças da versão 1.1
 
-```bash
-http://localhost:3000
-```
+- Home reescrita em tom de produto.
+- Topo e links externos corrigidos.
+- Footer expandido com navegação útil.
+- `llms.txt` reestruturado para agentes de IA.
+- Páginas dos projetos filhos padronizadas com status, maturidade, fontes e lacunas.
+- Template de projeto filho atualizado para evitar dados inventados.
 
-## Estrutura
+## Regra editorial
 
-```txt
-capyuniverse-docs/
-├── docs.json
-├── index.mdx
-├── quickstart.mdx
-├── platform/
-├── agents/
-├── projects/
-├── development/
-├── governance/
-├── reference/
-├── logo/
-└── .github/workflows/
-```
+Se uma informação não estiver clara no repositório público do projeto, registre como:
 
-## Projetos documentados
-
-- CapyUniverse Core
-- ValeRepor
-- Bicou
-- CapyMind
-- BuskaCEP
-- Sentinela Pedreira
-
-## Checklist antes de publicar
-
-- [ ] Revisar nome, links e branding.
-- [ ] Confirmar se todos os projetos filhos continuam atualizados.
-- [ ] Rodar validação local.
-- [ ] Remover conteúdos antigos ou temporários.
-- [ ] Publicar no repositório definitivo.
-
-## Links úteis
-
-- CapyUniverse: https://github.com/faelscarpato/capyuniverse
-- Demo: https://faelscarpato.github.io/capyuniverse/
-- Perfil GitHub: https://github.com/faelscarpato
+`INFORMAÇÃO NÃO FORNECIDA`

@@ -1,27 +1,47 @@
 ---
 title: "Template de projeto filho"
-description: "Modelo para documentar novos projetos conectados ao CapyUniverse."
+description: "Modelo padrão para documentar projetos conectados ao CapyUniverse sem inventar dados."
+icon: "file-code"
+keywords: ["template", "projeto filho", "capyuniverse", "documentação"]
 ---
 
-Use este template sempre que um projeto filho entrar no ecossistema.
+Use este modelo sempre que um novo projeto entrar no ecossistema. A regra principal é: **a página deve traduzir fontes verificáveis, não preencher lacunas por suposição**.
 
-```md
----
-title: "[Nome do projeto]"
-description: "[Descrição curta]"
----
+## Frontmatter obrigatório
 
+```mdx
+---
+title: "[Nome público do projeto]"
+description: "[Descrição curta, factual e verificável]"
+sidebarTitle: "[Nome curto]"
+icon: "box"
+tag: "[ATIVO | EXPERIMENTAL | DEMO | EM EVOLUÇÃO]"
+keywords: ["capyuniverse", "[projeto]", "[stack]", "[domínio]"]
+timestamp: true
+
+status: "[experimental | demo | ativo | em evolução]"
+maturity: "[exploratória | protótipo funcional | operacional | avançada]"
+repo: "https://github.com/faelscarpato/[repo]"
+demo: "[URL ou INFORMAÇÃO NÃO FORNECIDA]"
+owner: "Rafael Scarpato"
+verified_on: "YYYY-MM-DD"
+canonical_sources:
+  - "README.md"
+  - "package.json"
+  - "Arquivos de arquitetura/setup quando existirem"
+---
+```
+
+## Estrutura obrigatória
+
+```mdx
 ## Resumo
 
 ## Papel dentro do CapyUniverse
 
-## Problema que resolve
+## Estado atual verificado
 
-## Público-alvo
-
-## Funcionalidades atuais
-
-## Stack
+## Stack verificada
 
 ## Arquitetura resumida
 
@@ -31,18 +51,28 @@ description: "[Descrição curta]"
 
 ## Riscos
 
-## Roadmap
+## Fontes canônicas
 
-## Fonte do projeto
+## INFORMAÇÃO NÃO FORNECIDA
 ```
 
-## Campos obrigatórios
+## Regras editoriais
 
-| Campo | Por quê |
-| --- | --- |
-| Resumo | Ajuda qualquer pessoa a entender rápido |
-| Papel no universo | Evita projeto solto |
-| Funcionalidades atuais | Separa fato de ideia |
-| Limitações | Evita promessa indevida |
-| Roadmap | Direciona evolução |
-| Fonte | Mantém rastreabilidade |
+- Diferencie **estado atual**, **limitação**, **risco** e **roadmap**.
+- Não transforme demo em produção.
+- Não afirmar integração, autenticação, backend, banco ou pagamento sem fonte.
+- Quando faltar evidência, escreva `INFORMAÇÃO NÃO FORNECIDA`.
+- Priorize README, documentação de arquitetura, setup, `package.json`, workflows e arquivos de configuração.
+- Se houver divergência entre nome comercial e nome do README, registre os dois.
+
+## Critério de aceite
+
+Uma página de projeto só deve ser considerada pronta quando tiver:
+
+- Link do repositório canônico.
+- Data de verificação.
+- Status e maturidade.
+- Stack verificável.
+- Modo de execução quando disponível.
+- Limitações explícitas.
+- Lacunas registradas.

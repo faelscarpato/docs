@@ -1,72 +1,120 @@
 ---
 title: "Bicou"
-description: "Produto filho para bicos rápidos, prestadores e supermercados de bairro."
+description: "Protótipo React unificado para fluxo de bicos rápidos com perfis de empresa, prestador e administração."
+sidebarTitle: "Bicou"
+icon: "briefcase"
+tag: "DEMO"
+keywords: ["bicou", "bicos", "marketplace", "react", "zustand", "tanstack query"]
+timestamp: true
+status: "demo"
+maturity: "protótipo funcional"
+repo: "https://github.com/faelscarpato/bicou"
+demo: "INFORMAÇÃO NÃO FORNECIDA"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "package.json"
+  - "TESTE_MANUAL.md"
 ---
 
 ## Resumo
 
-Bicou é um projeto React unificado para conectar empresas e prestadores em bicos rápidos, com fluxos para empresa, prestador e administração.
+Bicou é um projeto React unificado, criado a partir de base Lovable e evoluído com melhorias pontuais inspiradas em protótipo GPT para o fluxo do prestador.
 
 ## Papel dentro do CapyUniverse
 
-É um produto estratégico de alto potencial, mas deve ser amadurecido com mais cautela porque envolve operação, pagamentos, reputação, regras de trabalho, segurança e suporte.
+É um projeto de alto potencial de produto, mas seu enquadramento correto na docs precisa deixar claro que o estado atual público ainda é de protótipo funcional com fluxos demonstrativos.
 
-## Usuários
+## Estado atual verificado
 
-- Supermercado ou empresa que cria bicos.
-- Prestador que procura renda imediata.
-- Administrador da plataforma.
-
-## Funcionalidades documentadas
-
-- Landing.
-- Simulador.
-- Painel empresa.
-- Painel prestador.
-- Área admin.
-- Criação de bico.
-- Confirmação de prestador.
-- Acompanhamento.
-- Pagamento demonstrativo.
-- Carteira demo.
-- Saques e histórico local.
-- Filtros por categoria, data, valor/hora e ordenação.
-- Navegação desktop e bottom-nav mobile por perfil.
+- Landing e simulador.
+- Painel empresa, painel prestador e área admin.
+- Fluxos de criação de bico, confirmação de prestador e acompanhamento.
+- Check-in e check-out demo.
+- Carteira demo, histórico e saque simulado.
+- Filtros avançados por categoria, data, valor/hora e ordenação.
 - Tema claro/escuro.
+- Navegação mobile por perfil.
+- Migração de dados antigos no `localStorage`.
+- Checklist manual de testes cobrindo fluxos principais.
 
-## Stack observada
+## Stack verificada
 
-- Vite.
-- React.
-- TypeScript.
-- Tailwind CSS.
+- Vite + React + TypeScript.
+- Tailwind CSS com tokens visuais da base Lovable.
 - shadcn/ui.
 - lucide-react.
 - react-router-dom.
-- Zustand com persist.
+- Zustand com `persist` para estado local da demonstração.
 - TanStack Query.
+- Vitest.
 
-## Riscos principais
+## Arquitetura resumida
 
-| Risco | Por que importa |
-| --- | --- |
-| Jurídico/trabalhista | Marketplace de bicos precisa de termos e regras claras |
-| Pagamento | Transações reais exigem integração, compliance e antifraude |
-| Confiança | Prestador e empresa precisam de avaliação, histórico e suporte |
-| Segurança | Cadastro, identidade e dados pessoais exigem proteção |
-| Operação | Cancelamento, disputa, presença e confirmação precisam de processo |
+```mermaid
+flowchart TD
+  Roles[Empresa / Prestador / Admin]
+  App[React App]
+  Shell[AppShell por perfil]
+  Store[Zustand persist]
+  Filters[Filtros e ordenação]
+  Wallet[Carteira demo]
+  Legacy[Migração GPT]
+  Routes[Rotas públicas e privadas por papel]
 
-## Evolução recomendada
+  Roles --> App
+  App --> Shell
+  App --> Routes
+  Routes --> Store
+  Store --> Filters
+  Store --> Wallet
+  Store --> Legacy
+```
 
-1. Definir regras do marketplace.
-2. Criar termos de uso e política operacional.
-3. Separar dados demo de dados reais.
-4. Criar autenticação e perfis.
-5. Adicionar avaliação/reputação.
-6. Integrar pagamento somente após validação jurídica e de produto.
+Componentes e módulos citados no README:
 
-## Fonte do projeto
+- `src/App.tsx`: rotas públicas, empresa, prestador e admin.
+- `src/components/AppShell.tsx`: shell por perfil, sidebar desktop e bottom-nav mobile por role.
+- `src/lib/store.ts`: estado persistido de bicos, favoritos, carteira demo, saques e flag de migração.
+- `src/lib/bicoFilters.ts`: filtros e ordenação de bicos.
+- `src/lib/legacyMigration.ts`: migração única das chaves antigas `acceptedJobs` e `jobStatuses`.
+- `src/lib/wallet.ts`: seleção e cálculo de saldo, recebíveis e pagamentos.
 
-<Card title="Repositório Bicou" icon="github" href="https://github.com/faelscarpato/bicou" horizontal>
-  Projeto de marketplace/protótipo para bicos rápidos.
-</Card>
+## Como rodar
+
+```bash
+npm install
+npm run dev
+```
+
+## Build e preview
+
+```bash
+npm run build
+npm run preview
+```
+
+## Limitações atuais
+
+Pagamentos, saques, contratos, validações jurídicas e integrações financeiras devem ser tratados como **simulados** até que exista implementação real e documentação de produção.
+
+## Riscos
+
+- Ler o protótipo como operação pronta.
+- Misturar fluxo demo com fluxo transacional real.
+- Riscos jurídicos e operacionais em marketplace de trabalho.
+- Necessidade futura de autenticação, antifraude, pagamento, moderação e termos.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/bicou)
+- [TESTE_MANUAL.md](https://github.com/faelscarpato/bicou/blob/main/TESTE_MANUAL.md)
+- [package.json](https://github.com/faelscarpato/bicou/blob/main/package.json)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Demo pública oficial.
+- Autenticação real.
+- Integração de pagamento real.
+- Termos jurídicos, reputação e política operacional verificados publicamente.

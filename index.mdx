@@ -1,66 +1,116 @@
 ---
 title: "CapyUniverse Docs"
-description: "Documentação oficial do universo local de projetos, ferramentas e agentes IA."
+description: "Documentação oficial da plataforma-mãe do ecossistema Capy: projetos, agentes IA, padrões técnicos e roadmap em um único ponto de verdade."
+mode: "custom"
+icon: "sparkles"
+sidebarTitle: "Início"
+keywords: ["capyuniverse", "docs", "agentes ia", "projetos", "plataforma", "roadmap"]
+hideFooterPagination: true
 ---
 
-CapyUniverse é a **plataforma-mãe** do ecossistema Capy: um hub local para organizar, testar, documentar e evoluir ferramentas com IA, agentes especializados e produtos filhos.
+# CapyUniverse Docs
 
-O objetivo desta documentação é transformar o CapyUniverse em um **centro operacional** para todos os projetos: cada ferramenta, agente e produto passa a ter contexto, padrão técnico, modo de uso, roadmap e documentação própria.
+> O lugar onde seus projetos deixam de ser arquivos soltos e passam a ter contexto, padrão, rastreabilidade e evolução.
 
+CapyUniverse Docs é a documentação oficial da plataforma-mãe do ecossistema Capy. Aqui ficam a visão do universo, a arquitetura-base, os agentes IA, os projetos filhos e o roadmap técnico que conecta tudo.
+
+<Cards>
+  <Card title="Começar em 2 minutos" icon="rocket" href="/quickstart">
+    Entenda a plataforma, os projetos filhos e por onde navegar primeiro.
+  </Card>
+  <Card title="Explorar projetos" icon="boxes-stacked" href="/projects/overview">
+    Veja o catálogo oficial dos projetos, com status, papel no ecossistema e fontes canônicas.
+  </Card>
+  <Card title="Ver arquitetura" icon="sitemap" href="/platform/architecture">
+    Entenda como interface, serviços IA, dados locais e projetos filhos se conectam.
+  </Card>
+</Cards>
 
 ![Mapa visual do ecossistema CapyUniverse](/images/universe-map.svg)
 
-<Card
-  title="Começar pelo mapa do universo"
-  icon="sparkles"
-  href="/quickstart"
-  horizontal
->
-  Entenda a lógica da plataforma, dos agentes e dos projetos filhos em poucos minutos.
-</Card>
+## Definição do produto
 
-## O que o CapyUniverse centraliza
+**CapyUniverse é uma plataforma-mãe local para organizar, testar, documentar e evoluir ferramentas com IA, agentes especializados e produtos digitais em um ecossistema modular.**
+
+Ele não deve ser tratado como um produto único e fechado. A proposta é funcionar como um universo operacional: cada ferramenta, agente ou projeto filho tem objetivo, contexto, stack, status, limitações, próximos passos e documentação própria.
+
+## Para quem serve
 
 <Columns cols={2}>
-  <Card title="CapyTools" icon="wrench" href="/platform/capytool-standard">
-    Ferramentas modulares, cada uma com uma função clara, interface própria e possibilidade de integração com IA.
+  <Card title="Criador e mantenedor" icon="user-gear">
+    Centraliza decisões, padrões, status e próximos passos dos projetos sem depender de memória solta.
   </Card>
-  <Card title="Agentes IA" icon="bot" href="/agents/overview">
-    Agentes especializados em tarefas como engenharia, documentação, infográficos, renderização e análise técnica.
+  <Card title="Visitantes e parceiros" icon="users">
+    Ajuda a entender rapidamente o que existe, o que é experimental e quais projetos têm potencial de produto.
   </Card>
-  <Card title="Projetos filhos" icon="diagram-project" href="/projects/overview">
-    Produtos e sistemas conectados ao ecossistema, como ValeRepor, Bicou, CapyMind, BuskaCEP e Sentinela Pedreira.
+  <Card title="Agentes IA" icon="bot">
+    Fornece contexto estruturado para análise, geração, documentação, diagnóstico e evolução técnica.
   </Card>
-  <Card title="Governança" icon="shield-check" href="/governance/quality-checklist">
-    Padrões para criar, documentar, versionar, revisar e evoluir cada módulo sem perder organização.
+  <Card title="Desenvolvimento futuro" icon="code">
+    Cria uma base consistente para transformar protótipos em produtos documentados, testáveis e evolutivos.
   </Card>
 </Columns>
 
-## Posicionamento
+## O que já existe hoje
 
-> **CapyUniverse é um hub local de ferramentas, agentes e produtos IA criado para centralizar, testar, documentar e evoluir projetos em um ecossistema modular.**
+| Área | Estado atual |
+| --- | --- |
+| Plataforma | CapyUniverse Core como hub experimental de IA aplicada |
+| Projetos filhos | Catálogo inicial com CapyUniverse Core, ValeRepor, Bicou, CapyMind, BuskaCEP e Sentinela Pedreira |
+| Agentes IA | Seções para engenharia, documentação, renderização e infográficos |
+| Governança | Checklist, segurança, roadmap e templates de documentação |
+| AI-ready | `llms.txt` publicado e preparado para agentes |
 
-## Princípios do universo
+## Projetos em destaque
 
-- **Modularidade:** cada ferramenta deve poder evoluir sem quebrar o resto do ecossistema.
-- **IA aplicada:** os agentes devem resolver tarefas reais, não apenas demonstrar tecnologia.
-- **Local-first:** sempre que possível, a base deve funcionar localmente e reduzir dependências externas.
-- **Documentação como produto:** cada projeto filho precisa ter objetivo, público, fluxo, arquitetura e próximos passos.
-- **Evolução progressiva:** protótipos podem virar produtos comerciais quando atingirem clareza, utilidade e estabilidade.
-
-## Primeiros caminhos
-
-<Columns cols={2}>
-  <Card title="Arquitetura da plataforma" icon="sitemap" href="/platform/architecture">
-    Veja como UI, serviços de IA e estado local se conectam.
+<CardGroup cols={2}>
+  <Card title="CapyUniverse Core" icon="sparkles" href="/projects/capyuniverse-core">
+    Hub experimental e modular de IA aplicada, com ferramentas web e integração com LLMs.
   </Card>
-  <Card title="Catálogo de projetos" icon="boxes-stacked" href="/projects/overview">
-    Entenda o papel de cada projeto filho dentro do ecossistema.
+  <Card title="ValeRepor" icon="package-check" href="/projects/valerepor">
+    Sistema PWA/offline para controle de validade e reposição de produtos em supermercados.
   </Card>
-  <Card title="Padrão de uma CapyTool" icon="puzzle-piece" href="/platform/capytool-standard">
-    Use este padrão para criar novas páginas, módulos e ferramentas.
+  <Card title="Bicou" icon="briefcase" href="/projects/bicou">
+    Protótipo React para fluxo de bicos rápidos com perfis de empresa, prestador e administração.
   </Card>
-  <Card title="Roadmap do universo" icon="route" href="/governance/roadmap">
-    Veja a evolução recomendada para plataforma local, produto e cloud.
+  <Card title="CapyMind" icon="brain" href="/projects/capymind">
+    Knowledge pack docs-as-code para organizar conhecimento humano e contexto para IA.
   </Card>
-</Columns>
+  <Card title="BuskaCEP" icon="map-pinned" href="/projects/buskacep">
+    Utilitário local para consulta de CEPs de Pedreira-SP com busca e mapa integrado.
+  </Card>
+  <Card title="Sentinela Pedreira" icon="shield" href="/projects/sentinela-pedreira">
+    Plataforma cívica municipal com foco em documentos públicos, análise e rastreabilidade.
+  </Card>
+</CardGroup>
+
+## Roadmap imediato da documentação
+
+1. Reescrever a home em tom de produto.
+2. Corrigir topo, footer e links externos.
+3. Padronizar páginas dos projetos filhos com fontes canônicas.
+4. Melhorar `llms.txt` para consumo por agentes.
+5. Ativar métricas e feedback quando a base editorial estiver estável.
+
+## Como começar
+
+<Steps>
+  <Step title="Leia o Quickstart">
+    Entenda a lógica geral do universo e como navegar pela documentação.
+  </Step>
+  <Step title="Veja a arquitetura">
+    Abra a seção de plataforma para entender o papel do Core, dos agentes e dos projetos filhos.
+  </Step>
+  <Step title="Escolha um projeto filho">
+    Acesse o catálogo para entender status, stack, setup, limitações e lacunas de cada projeto.
+  </Step>
+  <Step title="Use os padrões">
+    Ao criar um novo projeto, use o template e o padrão de CapyTool para manter o ecossistema organizado.
+  </Step>
+</Steps>
+
+<Cards>
+  <Card title="Abrir Quickstart" icon="rocket" href="/quickstart" />
+  <Card title="Ver projetos filhos" icon="boxes-stacked" href="/projects/overview" />
+  <Card title="Abrir CapyUniverse" icon="external-link" href="https://faelscarpato.github.io/capyuniverse/" />
+</Cards>

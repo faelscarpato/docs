@@ -1,59 +1,93 @@
 ---
 title: "CapyUniverse Core"
-description: "A plataforma-mãe para ferramentas, agentes e produtos IA."
+description: "Hub experimental e modular de IA aplicada, com ferramentas web, camada de serviços LLM e persistência leve no navegador."
+sidebarTitle: "Core"
+icon: "sparkles"
+tag: "EXPERIMENTAL"
+keywords: ["capyuniverse", "ia aplicada", "llm", "react", "vite", "gemini", "openai"]
+timestamp: true
+status: "experimental"
+maturity: "exploratória"
+repo: "https://github.com/faelscarpato/capyuniverse"
+demo: "https://faelscarpato.github.io/capyuniverse/"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "ARCHITECTURE.md"
 ---
 
 ## Resumo
 
-O CapyUniverse Core é o centro do ecossistema. Ele organiza ferramentas com IA, páginas funcionais, agentes especializados, experimentos e projetos filhos.
+CapyUniverse Core é o hub experimental do ecossistema. O repositório público o descreve como uma plataforma modular de IA aplicada, voltada a ferramentas, automações e experiências web com LLMs.
 
-## Objetivo
+## Papel dentro do CapyUniverse
 
-Criar uma base local e modular para:
+É a plataforma-mãe do universo: o lugar onde os CapyTools, a camada de IA e os padrões arquiteturais se consolidam antes de se transformarem em produtos filhos ou módulos estáveis.
 
-- testar ferramentas com IA;
-- organizar prompts e agentes;
-- acelerar criação de produtos;
-- documentar tudo em um universo único;
-- servir como portfólio técnico vivo.
+## Estado atual verificado
 
-## Stack observada
+- Hub experimental, não produto único e fechado.
+- Estrutura modular com múltiplas ferramentas e experimentos.
+- Integração com modelos de linguagem.
+- Fluxo conceitual: usuário → interface web → serviço de IA → processamento → resposta.
+- Foco em arquitetura, experimentação e aprendizado.
 
-- HTML.
-- CSS.
-- JavaScript.
-- React.
-- Vite.
-- Integrações planejadas/indicadas com Gemini e OpenAI.
+## Stack verificada
 
-## Fluxo conceitual
+- HTML, CSS e JavaScript.
+- React e Vite.
+- Gemini API e OpenAI API via HTTP.
+- JSON, estado em memória e pipelines simples.
+- Git, APIs REST e experimentação local.
 
-```txt
-Usuário → Interface Web → CapyTool/Agente → Serviço IA → Resposta → Histórico/estado local
+## Arquitetura resumida
+
+```mermaid
+flowchart LR
+  U[Usuário]
+  UI[Interfaces web / CapyTools]
+  S[Serviços LLM]
+  D[Estado local / browser storage]
+  R[Resposta / pós-processamento]
+
+  U --> UI
+  UI --> S
+  UI --> D
+  S --> R
+  D --> UI
+  R --> UI
 ```
 
-## Módulos esperados
+## Como rodar
 
-| Módulo | Função |
-| --- | --- |
-| Navegação central | Organizar acesso às ferramentas |
-| CapyTools | Páginas/ferramentas independentes |
-| Serviços IA | Camada comum para provedores |
-| Catálogo de projetos | Índice dos projetos filhos |
-| Documentação | Fonte oficial do ecossistema |
+```bash
+npm install
+npm run dev
+```
 
-## Roadmap específico
+O README orienta configurar variáveis de ambiente usando `.env.example`.
 
-1. Criar catálogo unificado de CapyTools.
-2. Padronizar estrutura de módulo.
-3. Separar prompts mestres por agente.
-4. Criar sistema de configuração de provedores IA.
-5. Adicionar persistência local padronizada.
-6. Evoluir para modo plugin ou monorepo.
-7. Conectar CapyMind como base de contexto.
+## Limitações atuais
 
-## Fonte do projeto
+- Natureza experimental e modular.
+- Ferramentas podem surgir, evoluir ou ser descartadas.
+- Nem todas as ferramentas estão sempre ativas.
+- O foco atual está mais em arquitetura e experimentação do que em empacotamento de produto final.
 
-<Card title="Repositório CapyUniverse" icon="github" href="https://github.com/faelscarpato/capyuniverse" horizontal>
-  Código e documentação principal da plataforma-mãe.
-</Card>
+## Riscos
+
+- Escopo amplo demais para uma narrativa simples de produto.
+- Risco de virar coleção de páginas soltas se não houver padrão de módulo.
+- Onboarding difícil se a documentação não separar Core, agentes e projetos filhos.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/capyuniverse)
+- [ARCHITECTURE.md](https://github.com/faelscarpato/capyuniverse/blob/main/ARCHITECTURE.md)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Releases publicadas.
+- Suite de testes verificável no repositório de forma explícita.
+- Política formal de versionamento dos CapyTools.

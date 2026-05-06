@@ -1,6 +1,22 @@
 ---
 title: "Sentinela Pedreira"
-description: "Plataforma pública de inteligência cívica municipal."
+description: "Plataforma cívica municipal com base em React, Supabase, documentos públicos, análise estruturada e rastreabilidade."
+sidebarTitle: "Sentinela"
+icon: "shield"
+tag: "EM EVOLUÇÃO"
+keywords: ["sentinela pedreira", "supabase", "rag", "transparência", "documentos públicos", "edge functions"]
+timestamp: true
+status: "em evolução"
+maturity: "avançada"
+repo: "https://github.com/faelscarpato/sentinelapedreira"
+demo: "INFORMAÇÃO NÃO FORNECIDA"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "README_ARCHITECTURE.md"
+  - "README_SETUP.md"
+  - "package.json"
 ---
 
 ## Resumo
@@ -9,55 +25,85 @@ Sentinela Pedreira é uma plataforma pública de inteligência cívica municipal
 
 ## Papel dentro do CapyUniverse
 
-É um projeto de alto impacto público. Dentro do ecossistema, representa a frente de **IA aplicada à transparência, documentos públicos e análise cívica**.
+É o projeto filho tecnicamente mais sofisticado e um candidato forte a case de plataforma aplicada a problema real.
 
-## Stack observada
+## Estado atual verificado
+
+- Frontend em React + TypeScript + Vite.
+- Roteamento com `react-router`.
+- Estilo com Tailwind/CSS utilitário.
+- Markdown renderizado com `react-markdown` + `remark-gfm`.
+- Páginas da aplicação em `src/app/pages`.
+- Componentes reutilizáveis em `src/app/components`.
+- Camada central de agregação e normalização dos dados em `src/app/data/realData.ts`.
+- Dados gerados em `src/app/data/generated/*`.
+- Ativos estáticos, documentos e relatórios `.md` em `public/`.
+- Fluxo atual de documentos e análises com lista montada na UI e relatórios em Markdown.
+- Pasta pública de documentos da Câmara Municipal 2026 com subpastas de análises detectadas.
+
+## Stack verificada
 
 - React.
-- TypeScript.
 - Vite.
-- react-router.
+- TypeScript.
+- `react-router`.
 - Tailwind/CSS utilitário.
-- react-markdown.
-- remark-gfm.
-- Supabase presente na estrutura do projeto.
+- `react-markdown`.
+- `remark-gfm`.
+- Supabase aparece no repositório por pasta `supabase` e nos arquivos de setup/arquitetura.
 
-## Fluxo documental identificado
+## Arquitetura resumida
 
-```txt
-Documentos públicos
-  ↓
-Normalização / base de dados
-  ↓
-Cards e páginas de consulta
-  ↓
-Análises Markdown
-  ↓
-Renderização acessível na interface
+```mermaid
+flowchart TD
+  User[Usuário / cidadão / equipe editorial]
+  App[React + Vite]
+  Data[realData.ts / dados gerados]
+  Docs[Documentos públicos]
+  Reports[Relatórios Markdown]
+  Public[public/]
+  Supabase[Supabase / pasta supabase]
+
+  User --> App
+  App --> Data
+  Data --> Docs
+  Data --> Reports
+  Docs --> Public
+  Reports --> Public
+  App --> Supabase
 ```
 
-## Riscos principais
+## Como rodar
 
-| Risco | Mitigação |
-| --- | --- |
-| Interpretação incorreta de documento público | Separar fato, análise e opinião |
-| Atualização incompleta | Criar rotina de ingestão e revisão |
-| Responsabilidade pública | Exibir fontes, datas e limites da análise |
-| Dados sensíveis | Curadoria antes de publicação |
-| Viés de IA | Revisão humana e transparência metodológica |
+O repositório informa o uso de React + TypeScript + Vite e possui `package.json`. Para setup operacional completo, priorize os arquivos:
 
-## Evolução recomendada
+- `README_SETUP.md`
+- `README_ARCHITECTURE.md`
+- `package.json`
 
-1. Criar página de metodologia.
-2. Padronizar formato das análises.
-3. Adicionar fonte, data e status em cada documento.
-4. Criar alertas de atualização.
-5. Criar busca avançada.
-6. Criar seção “Como interpretar”.
-7. Integrar CapyMind como memória documental.
+## Limitações atuais
 
-## Fonte do projeto
+- A documentação pública do repositório aparece em formato de `Agent.md`, não como README comercial para usuário final.
+- Nem todos os tipos documentais da Câmara têm análise local `.md` no estado observado.
+- Parte da documentação técnica depende dos arquivos de arquitetura e setup, não apenas do README principal.
 
-<Card title="Repositório Sentinela Pedreira" icon="github" href="https://github.com/faelscarpato/sentinelapedreira" horizontal>
-  Plataforma pública de inteligência cívica municipal.
-</Card>
+## Riscos
+
+- Complexidade operacional maior que os outros projetos filhos.
+- Superfície maior de segurança por lidar com documentos, dados e integrações.
+- Drift entre documentos gerados, dados públicos e UI se não houver pipeline claro de atualização.
+- Necessidade de cuidado editorial para separar fato público, análise e opinião.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/sentinelapedreira)
+- [README_ARCHITECTURE.md](https://github.com/faelscarpato/sentinelapedreira/blob/main/README_ARCHITECTURE.md)
+- [README_SETUP.md](https://github.com/faelscarpato/sentinelapedreira/blob/main/README_SETUP.md)
+- [package.json](https://github.com/faelscarpato/sentinelapedreira/blob/main/package.json)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Demo pública oficial.
+- URL pública do projeto deployado.
+- Política pública de curadoria editorial.
+- Documento final de apresentação do produto para usuário não técnico.

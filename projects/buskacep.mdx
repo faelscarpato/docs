@@ -1,54 +1,107 @@
 ---
 title: "BuskaCEP"
-description: "Utilitário local para consulta dos novos CEPs de Pedreira-SP."
+description: "Aplicação web para consulta de CEPs de Pedreira-SP com busca rápida, base local e mapa integrado."
+sidebarTitle: "BuskaCEP"
+icon: "map-pinned"
+tag: "ATIVO"
+keywords: ["buskacep", "pedreira cep", "react", "leaflet", "mapa", "cep"]
+timestamp: true
+status: "ativo"
+maturity: "protótipo vertical"
+repo: "https://github.com/faelscarpato/buskacep"
+demo: "https://buskacep.pages.dev/"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "package.json"
 ---
 
 ## Resumo
 
-BuskaCEP é uma aplicação web para consultar novos CEPs de Pedreira-SP por rua, bairro ou CEP.
+BuskaCEP documenta o utilitário cujo README público aparece como **Pedreira CEP**: uma aplicação web para consultar os novos CEPs de Pedreira-SP por rua, bairro ou CEP.
 
 ## Papel dentro do CapyUniverse
 
-É um exemplo de **produto utilitário local**, criado para resolver um problema concreto da cidade. Pode servir como modelo para outras ferramentas públicas de consulta rápida.
+É um projeto de utilidade pública/local, com escopo claro e alto valor de uso imediato.
 
-## Funcionalidades documentadas
+## Estado atual verificado
 
 - Busca client-side com normalização de acentos.
-- Layout responsivo.
-- Lista-first no mobile.
-- Mapa sticky no desktop.
-- Overlay de mapa no resultado ativo.
+- Layout responsivo com lista-first no mobile e mapa sticky no desktop.
+- Mapa em overlay para o resultado ativo.
 - Ações de copiar CEP e abrir no Google Maps.
-- Bottom sheet mobile.
-- Geocodificação sob demanda.
-- Filtros rápidos por bairro.
-- Toast de confirmação.
-- Base local `public/ceps.json`.
+- Bottom sheet mobile com preview e modo expandido.
+- Geocodificação sob demanda com fallback aproximado.
+- Filtros rápidos por bairros mais frequentes.
+- Toast de confirmação ao copiar CEP.
+- Interface única, sem dependência de Bootstrap legado ou jQuery.
 
-## Stack observada
+## Stack verificada
 
 - Vite.
 - React.
 - TypeScript.
 - Tailwind CSS.
-- Base local JSON.
+- Leaflet / react-leaflet.
+- Base local em `public/ceps.json`.
 
-## Risco técnico
+## Arquitetura resumida
 
-<Warning>
-  A geocodificação sob demanda precisa de cuidado em produção. A evolução recomendada é proxy/backend com cache persistente, identificação adequada e rate limiting.
-</Warning>
+```mermaid
+flowchart LR
+  U[Usuário]
+  UI[Busca React]
+  CEP[Base local ceps.json]
+  GEO[Geocoding sob demanda]
+  MAP[Mapa / overlay]
+  COPY[Copiar CEP / abrir Maps]
 
-## Evolução recomendada
+  U --> UI
+  UI --> CEP
+  UI --> GEO
+  UI --> MAP
+  MAP --> COPY
+```
 
-1. Criar página de origem dos dados.
-2. Criar versão offline/PWA.
-3. Adicionar analytics de buscas sem resultado.
-4. Criar painel de atualização da base.
-5. Reaproveitar como template para outras cidades.
+## Como rodar
 
-## Fonte do projeto
+```bash
+npm install
+npm run dev
+```
 
-<Card title="Repositório BuskaCEP" icon="github" href="https://github.com/faelscarpato/buskacep" horizontal>
-  Aplicação de consulta de CEPs por rua, bairro ou CEP.
-</Card>
+## Como gerar produção
+
+```bash
+npm run build
+```
+
+## Estrutura principal
+
+- `src/App.tsx`: orquestração da busca, seleção e layout principal.
+- `src/components/`: bottom sheet, toast, cards de resultado e overlay do mapa.
+- `src/design-tokens.css`: tokens visuais em CSS variables.
+- `src/index.css`: base visual e motion global.
+- `public/ceps.json`: base de CEPs.
+
+## Limitações atuais
+
+O geocoding usa Nominatim sob demanda e cache em memória no cliente. Para produção, o README recomenda proxy/backend com cache persistente e rate limiting, porque o serviço exige identificação adequada e limites de uso.
+
+## Riscos
+
+- Dependência de geocoding no cliente.
+- Atualização manual da base `ceps.json`.
+- Ambiguidade de naming entre **BuskaCEP** e **Pedreira CEP**.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/buskacep)
+- [package.json](https://github.com/faelscarpato/buskacep/blob/main/package.json)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Processo oficial de atualização da base de CEPs.
+- API própria / backend público.
+- Política de cache persistente em produção.

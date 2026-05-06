@@ -1,6 +1,21 @@
 ---
 title: "ValeRepor"
-description: "Produto filho para controle de validade e reposição de produtos em supermercados."
+description: "Sistema PWA/offline para controle de validade e reposição de produtos em supermercados."
+sidebarTitle: "ValeRepor"
+icon: "package-check"
+tag: "ATIVO"
+keywords: ["valerepor", "pwa", "supermercado", "validade", "reposição", "offline"]
+timestamp: true
+status: "em evolução"
+maturity: "protótipo funcional"
+repo: "https://github.com/faelscarpato/valerepor"
+demo: "INFORMAÇÃO NÃO FORNECIDA"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "package.json"
+  - "CLOUDFLARE_PAGES.md"
 ---
 
 ## Resumo
@@ -9,74 +24,86 @@ ValeRepor é um sistema PWA/offline para controle de validade e reposição de p
 
 ## Papel dentro do CapyUniverse
 
-É o primeiro produto comercial recomendado para amadurecimento, porque resolve uma dor simples, concreta e fácil de vender: evitar perdas por vencimento e organizar reposição de prateleira.
+É um dos projetos com melhor aderência comercial imediata porque resolve uma dor concreta, operacional e fácil de demonstrar: validade, reposição e rotina de loja.
 
-## Usuários
+## Estado atual verificado
 
-- Dono de supermercado.
-- Gerente de loja.
-- Repositor.
-- Encarregado de setor.
-- Equipe de controle de validade.
-
-## Funcionalidades documentadas
-
+- Nome comercial ajustado para ValeRepor.
+- Alerta padrão de 30 dias antes do vencimento.
 - Cadastro e edição de produtos.
 - Cadastro e edição de setores/prateleiras.
-- Cadastro de reposição com lote.
-- Alerta padrão 30 dias antes do vencimento.
+- Cadastro de reposição com campo de lote.
 - Edição de reposições pela tela de alertas.
-- Validações de quantidade e datas.
-- Bloqueio de exclusão quando há reposições vinculadas.
-- Histórico de ações por status.
-- Relatórios por lote, status e setor.
-- Backup JSON, importação, limpeza local e dados de exemplo.
-- Service worker com cache básico para modo offline após primeiro carregamento.
+- Validações de quantidade, datas obrigatórias e validade anterior à reposição.
+- Bloqueio de exclusão de produtos/locais com reposições vinculadas.
+- Histórico de ações quando o status muda.
+- Relatório com lote, histórico de ações, totais por status e setor.
+- Backup JSON, importação de backup, limpeza local e dados de exemplo.
+- Ícones PWA e service worker com cache básico para funcionamento offline após primeiro carregamento.
 
-## Stack observada
+## Stack verificada
 
-- Vite.
 - React.
+- Vite.
 - TypeScript.
 - Tailwind CSS.
-- PWA.
-- Service worker.
+- PWA / service worker.
 - LocalStorage.
 
-## Limitação atual
+## Arquitetura resumida
 
-<Warning>
-  A versão atual salva dados no dispositivo via LocalStorage. Para uso comercial real, a evolução recomendada é backend, banco de dados, login, sincronização e política de backup.
-</Warning>
+```mermaid
+flowchart LR
+  U[Operador]
+  PWA[Interface PWA]
+  LS[localStorage]
+  SW[Service Worker]
+  B[Backup JSON / importação]
+  R[Relatórios / alertas]
+  DEPLOY[Cloudflare Pages]
 
-## Evolução recomendada
-
-| Etapa | Objetivo |
-| --- | --- |
-| Multiusuário | Separar operador, gerente e administrador |
-| Backend | Sincronizar dados entre dispositivos |
-| Banco de dados | Persistência confiável por loja |
-| Alertas inteligentes | Notificações por setor, lote e criticidade |
-| Relatórios gerenciais | Perdas evitadas, produtos críticos e rotina de validade |
-| Modo rede de lojas | Unificar várias unidades |
-
-## Documentação própria recomendada
-
-```txt
-ValeRepor
-├── O que é
-├── Instalação PWA
-├── Cadastro de produtos
-├── Cadastro de setores
-├── Registrar reposição
-├── Entender alertas
-├── Relatórios
-├── Backup e restauração
-└── Roadmap comercial
+  U --> PWA
+  PWA --> LS
+  PWA --> SW
+  PWA --> B
+  PWA --> R
+  DEPLOY --> PWA
 ```
 
-## Fonte do projeto
+## Como rodar
 
-<Card title="Repositório ValeRepor" icon="github" href="https://github.com/faelscarpato/valerepor" horizontal>
-  Projeto PWA/offline para controle de validade e reposição.
-</Card>
+```bash
+npm install
+npm run dev
+```
+
+## Como gerar build
+
+```bash
+npm run build
+```
+
+## Limitações atuais
+
+Os dados continuam salvos no dispositivo via `localStorage`. Para uso comercial real, o README recomenda reforçar com backup frequente ou evoluir para backend/banco de dados com login e sincronização.
+
+## Riscos
+
+- Perda de dados por depender do dispositivo.
+- Ausência de sincronização entre operadores.
+- Escalabilidade limitada sem backend multiunidade.
+- Necessidade de política operacional de backup antes de uso comercial contínuo.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/valerepor)
+- [CLOUDFLARE_PAGES.md](https://github.com/faelscarpato/valerepor/blob/main/CLOUDFLARE_PAGES.md)
+- [package.json](https://github.com/faelscarpato/valerepor/blob/main/package.json)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Demo pública oficial.
+- Arquitetura de backend.
+- Autenticação real.
+- Banco de dados remoto.
+- Testes automatizados além da validação por build.

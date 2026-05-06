@@ -1,49 +1,100 @@
 ---
 title: "CapyMind"
-description: "Knowledge pack docs-as-code para contexto, governança e recuperação por IA."
+description: "Knowledge pack docs-as-code preparado para servir como base de contexto para IAs, automações e consulta humana."
+sidebarTitle: "CapyMind"
+icon: "brain"
+tag: "ATIVO"
+keywords: ["capymind", "knowledge pack", "docs-as-code", "retrieval", "mcp", "agent"]
+timestamp: true
+status: "ativo"
+maturity: "operacional"
+repo: "https://github.com/faelscarpato/capymind"
+demo: "INFORMAÇÃO NÃO FORNECIDA"
+owner: "Rafael Scarpato"
+verified_on: "2026-05-06"
+canonical_sources:
+  - "README.md"
+  - "package.json"
 ---
 
 ## Resumo
 
-CapyMind é uma base documental organizada para servir como contexto confiável para humanos, automações e IAs.
+CapyMind é um knowledge pack docs-as-code voltado à organização navegável, versionada, segura e testável de conhecimento para IA, automações e consulta humana.
 
 ## Papel dentro do CapyUniverse
 
-CapyMind deve funcionar como a **memória estruturada** do ecossistema: catálogo de projetos, instruções para agentes, referências, políticas, metadados, índices e documentação canônica.
+É a camada de memória, taxonomia, governança e grounding do ecossistema. Não é um app visual; é uma base operacional de conhecimento.
 
-## Objetivo
+## Estado atual verificado
 
-- Centralizar conhecimento útil do ecossistema Capy.
-- Permitir recuperação confiável por IA.
-- Reduzir ambiguidade, duplicação e drift documental.
-- Aplicar padrões de segurança, citabilidade e manutenção.
+- Estrutura dedicada a documentação canônica, conhecimento derivado, instruções para agentes, contratos e governança.
+- Pastas para `docs`, `ai`, `catalog`, `knowledge`, `projects`, `references`, `assets`, `schemas` e `scripts`.
+- Catálogo de projetos e metadados.
+- Políticas de IA, segurança e governança.
+- Manifestos e índices gerados.
+- Scripts públicos para validação, índice, links, segredos, `llms` e manifesto.
 
-## Escopo adequado
+## Stack verificada
 
-| Entra no CapyMind | Não deve entrar sem curadoria |
-| --- | --- |
-| Guias | Backups brutos |
-| Runbooks | Arquivos temporários |
-| ADRs | Exports pesados |
-| Catálogo de projetos | Cópias duplicadas de repositórios |
-| Políticas de IA | Dados sem classificação |
-| Schemas e exemplos | Conteúdo sensível sem regra |
+- Node 18+.
+- TypeScript / TSX.
+- AJV / JSON Schema.
+- YAML.
+- dotenv.
+- SDK/CLI do Supabase no toolchain.
 
-## Relação com esta documentação
+## Arquitetura resumida
 
-- **CapyUniverse Docs:** vitrine pública/organizada do ecossistema.
-- **CapyMind:** base de conhecimento e contexto para agentes.
+```mermaid
+flowchart LR
+  Sources[Docs canônicos e referências]
+  Pack[Knowledge pack]
+  Scripts[Validação / links / segredos / llms / manifest]
+  Catalog[Catálogo e projetos]
+  AI[Recuperação para IA]
+  Human[Consulta humana]
 
-## Evolução recomendada
+  Sources --> Pack
+  Scripts --> Pack
+  Pack --> Catalog
+  Pack --> AI
+  Pack --> Human
+```
 
-1. Manter catálogo de projetos atualizado.
-2. Criar metadados por projeto.
-3. Criar indexação para IA.
-4. Criar política de fontes e citações.
-5. Integrar com agentes do CapyUniverse.
+## Como rodar / validar
 
-## Fonte do projeto
+Scripts observáveis no `package.json`:
 
-<Card title="Repositório CapyMind" icon="github" href="https://github.com/faelscarpato/capymind" horizontal>
-  Knowledge pack docs-as-code do ecossistema Capy.
-</Card>
+```bash
+npm run validate
+npm run build:index
+npm run check:links
+npm run check:secrets
+npm run generate:llms
+npm run generate:manifest
+npm run ingest
+npm run chunk
+npm run build
+```
+
+## Limitações atuais
+
+O README indica uma fase de organização institucional e deixa claro que o repositório não deve ser usado como backup bruto de projetos, monorepo completo ou depósito de arquivos temporários.
+
+## Riscos
+
+- Virar repositório de arquivo solto em vez de knowledge pack.
+- Misturar conteúdo canônico com experimental sem classificação adequada.
+- Crescer sem política de revisão e sem schemas consistentes.
+
+## Fontes canônicas
+
+- [README.md](https://github.com/faelscarpato/capymind)
+- [package.json](https://github.com/faelscarpato/capymind/blob/main/package.json)
+
+## INFORMAÇÃO NÃO FORNECIDA
+
+- Demo pública oficial.
+- UI própria.
+- Fluxo oficial de bootstrap local documentado passo a passo.
+- Pipeline CI público descrito em README.

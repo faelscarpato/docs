@@ -3,14 +3,17 @@
   "theme": "mint",
   "name": "CapyUniverse Docs",
   "colors": {
-    "primary": "#7C3AED",
-    "light": "#22D3EE",
+    "primary": "#6E56CF",
+    "light": "#22C7A9",
     "dark": "#A78BFA"
   },
   "favicon": "/favicon.svg",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
+  },
+  "metadata": {
+    "timestamp": true
   },
   "navigation": {
     "tabs": [
@@ -38,21 +41,6 @@
         ]
       },
       {
-        "tab": "Agentes IA",
-        "groups": [
-          {
-            "group": "Sistema de agentes",
-            "pages": [
-              "agents/overview",
-              "agents/infographics",
-              "agents/engineering",
-              "agents/rendering",
-              "agents/documentation"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Projetos filhos",
         "groups": [
           {
@@ -65,6 +53,21 @@
               "projects/capymind",
               "projects/buskacep",
               "projects/sentinela-pedreira"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agentes IA",
+        "groups": [
+          {
+            "group": "Sistema de agentes",
+            "pages": [
+              "agents/overview",
+              "agents/infographics",
+              "agents/engineering",
+              "agents/rendering",
+              "agents/documentation"
             ]
           }
         ]
@@ -107,14 +110,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "CapyUniverse",
-          "href": "https://github.com/faelscarpato/capyuniverse",
+          "anchor": "App principal",
+          "href": "https://faelscarpato.github.io/capyuniverse/",
           "icon": "sparkles"
         },
         {
-          "anchor": "Portfólio",
-          "href": "https://faelscarpato.github.io/",
-          "icon": "globe"
+          "anchor": "GitHub Rafael",
+          "href": "https://github.com/faelscarpato",
+          "icon": "github"
         }
       ]
     }
@@ -122,17 +125,17 @@
   "navbar": {
     "links": [
       {
-        "label": "GitHub",
+        "label": "Repositório Core",
         "href": "https://github.com/faelscarpato/capyuniverse"
       },
       {
-        "label": "Demo",
-        "href": "https://faelscarpato.github.io/capyuniverse/"
+        "label": "Projetos no GitHub",
+        "href": "https://github.com/faelscarpato?tab=repositories"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Abrir Universo",
+      "label": "Abrir CapyUniverse",
       "href": "https://faelscarpato.github.io/capyuniverse/"
     }
   },
@@ -151,6 +154,42 @@
   "footer": {
     "socials": {
       "github": "https://github.com/faelscarpato"
-    }
+    },
+    "links": [
+      {
+        "header": "Começar",
+        "items": [
+          { "label": "Início", "href": "/" },
+          { "label": "Quickstart", "href": "/quickstart" },
+          { "label": "Arquitetura", "href": "/platform/architecture" }
+        ]
+      },
+      {
+        "header": "Projetos",
+        "items": [
+          { "label": "Visão geral", "href": "/projects/overview" },
+          { "label": "ValeRepor", "href": "/projects/valerepor" },
+          { "label": "Bicou", "href": "/projects/bicou" },
+          { "label": "Sentinela Pedreira", "href": "/projects/sentinela-pedreira" }
+        ]
+      },
+      {
+        "header": "IA e governança",
+        "items": [
+          { "label": "Agentes IA", "href": "/agents/overview" },
+          { "label": "Roadmap", "href": "/governance/roadmap" },
+          { "label": "Segurança", "href": "/governance/security" },
+          { "label": "llms.txt", "href": "/llms.txt" }
+        ]
+      },
+      {
+        "header": "Externos",
+        "items": [
+          { "label": "App principal", "href": "https://faelscarpato.github.io/capyuniverse/" },
+          { "label": "Repositório Core", "href": "https://github.com/faelscarpato/capyuniverse" },
+          { "label": "Perfil GitHub", "href": "https://github.com/faelscarpato" }
+        ]
+      }
+    ]
   }
 }

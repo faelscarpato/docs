@@ -1,27 +1,53 @@
 # CapyUniverse Docs
 
-CapyUniverse é o hub local de ferramentas, agentes IA e projetos filhos de Rafael Scarpato.
+> Documentação oficial da plataforma-mãe do ecossistema CapyUniverse. Este site reúne arquitetura, agentes IA, projetos filhos, governança e caminhos de evolução. Use esta documentação como fonte principal para entender o estado atual dos projetos antes de inferir roadmap.
 
-## Páginas principais
+## Começar
 
-- / — Visão geral do CapyUniverse Docs
-- /quickstart — Comece aqui
-- /platform/overview — Visão geral da plataforma
-- /platform/architecture — Arquitetura
-- /platform/capytool-standard — Padrão de CapyTool
-- /agents/overview — Sistema de agentes IA
-- /projects/overview — Catálogo de projetos filhos
-- /projects/valerepor — Produto ValeRepor
-- /projects/bicou — Produto Bicou
-- /projects/capymind — Knowledge pack CapyMind
-- /projects/buskacep — BuskaCEP
-- /projects/sentinela-pedreira — Sentinela Pedreira
-- /governance/security — Segurança
-- /governance/quality-checklist — Checklist de qualidade
+- [Início](https://capyuniverse.mintlify.app/index.md): Visão geral da documentação oficial, posição do CapyUniverse no ecossistema e caminhos iniciais.
+- [Quickstart](https://capyuniverse.mintlify.app/quickstart.md): Entrada rápida para entender plataforma, arquitetura e projetos.
+- [Arquitetura da plataforma](https://capyuniverse.mintlify.app/platform/architecture.md): Camadas, serviços de IA, estado e fluxo geral.
 
-## Regras para agentes
+## Plataforma
 
-- Não inventar funcionalidades.
-- Separar status atual de roadmap.
-- Usar português do Brasil.
-- Tratar CapyUniverse como plataforma-mãe e não como produto isolado.
+- [Visão geral da plataforma](https://capyuniverse.mintlify.app/platform/overview.md): O que é a plataforma-mãe e como ela organiza o ecossistema.
+- [Padrão de CapyTool](https://capyuniverse.mintlify.app/platform/capytool-standard.md): Convenções para novas ferramentas e módulos.
+- [Provedores de IA](https://capyuniverse.mintlify.app/platform/ai-providers.md): Visão da camada de IA e seus provedores.
+- [Dados e estado](https://capyuniverse.mintlify.app/platform/data-state.md): Diretrizes para persistência e gerenciamento de contexto.
+
+## Projetos filhos
+
+- [CapyUniverse Core](https://capyuniverse.mintlify.app/projects/capyuniverse-core.md): Hub experimental e modular de IA aplicada.
+- [ValeRepor](https://capyuniverse.mintlify.app/projects/valerepor.md): Controle de validade e reposição com foco offline/PWA.
+- [Bicou](https://capyuniverse.mintlify.app/projects/bicou.md): Protótipo de plataforma para bicos rápidos com fluxos por perfil.
+- [CapyMind](https://capyuniverse.mintlify.app/projects/capymind.md): Knowledge pack docs-as-code para IA, consulta humana e governança.
+- [BuskaCEP](https://capyuniverse.mintlify.app/projects/buskacep.md): Utilitário de busca de CEP com mapa e base local.
+- [Sentinela Pedreira](https://capyuniverse.mintlify.app/projects/sentinela-pedreira.md): Plataforma cívica municipal com base em documentos públicos, Supabase e análise estruturada.
+
+## Agentes IA
+
+- [Visão geral de agentes](https://capyuniverse.mintlify.app/agents/overview.md): Taxonomia e papel dos agentes no ecossistema.
+- [Engineering](https://capyuniverse.mintlify.app/agents/engineering.md): Agente para arquitetura, análise e execução técnica.
+- [Documentation](https://capyuniverse.mintlify.app/agents/documentation.md): Agente para escrita, revisão e estrutura documental.
+- [Rendering](https://capyuniverse.mintlify.app/agents/rendering.md): Agente voltado a saída visual/renderização.
+- [Infographics](https://capyuniverse.mintlify.app/agents/infographics.md): Agente para síntese visual e comunicação gráfica.
+
+## Governança
+
+- [Roadmap](https://capyuniverse.mintlify.app/governance/roadmap.md): Próximos ciclos de evolução.
+- [Segurança](https://capyuniverse.mintlify.app/governance/security.md): Regras mínimas de segurança.
+- [Checklist de qualidade](https://capyuniverse.mintlify.app/governance/quality-checklist.md): Critérios de revisão e publicação.
+
+## Regras para agentes e colaboradores
+
+- Use português do Brasil por padrão.
+- Trate CapyUniverse como plataforma-mãe, não como produto único e fechado.
+- Separe sempre: estado atual, limitação atual, recomendação e roadmap.
+- Se um repositório público não trouxer evidência, registrar como `INFORMAÇÃO NÃO FORNECIDA`.
+- Priorize README, arquivos de arquitetura, setup, `package.json` e docs oficiais do repositório.
+- Não promover um fluxo demo como fluxo de produção sem explicitar a diferença.
+
+## Fontes canônicas
+
+- [Repositório CapyUniverse Core](https://github.com/faelscarpato/capyuniverse)
+- [Perfil público de repositórios](https://github.com/faelscarpato?tab=repositories)
