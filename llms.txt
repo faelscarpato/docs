@@ -1,53 +1,72 @@
 # CapyUniverse Docs
 
-> Documentação oficial da plataforma-mãe do ecossistema CapyUniverse. Este site reúne arquitetura, agentes IA, projetos filhos, governança e caminhos de evolução. Use esta documentação como fonte principal para entender o estado atual dos projetos antes de inferir roadmap.
+Documentação oficial do CapyUniverse, plataforma-mãe local para organizar projetos, ferramentas, agentes IA, conhecimento e evolução técnica do ecossistema Capy.
 
-## Começar
+Base pública da documentação: https://capyuniverse.mintlify.app
+App principal informado: https://capyuniverse.pages.dev
+Perfil GitHub: https://github.com/faelscarpato
 
-- [Início](https://capyuniverse.mintlify.app/index.md): Visão geral da documentação oficial, posição do CapyUniverse no ecossistema e caminhos iniciais.
-- [Quickstart](https://capyuniverse.mintlify.app/quickstart.md): Entrada rápida para entender plataforma, arquitetura e projetos.
-- [Arquitetura da plataforma](https://capyuniverse.mintlify.app/platform/architecture.md): Camadas, serviços de IA, estado e fluxo geral.
+## Como usar esta documentação
 
-## Plataforma
+- Trate o CapyUniverse como ecossistema modular, não como produto único fechado.
+- Separe sempre: estado atual, limitação, risco, decisão pendente e roadmap.
+- Não invente funcionalidades, backend, banco de dados, autenticação ou deploy.
+- Quando uma informação não aparecer em README, código, CSV ou documentação fornecida, responda: INFORMAÇÃO NÃO FORNECIDA.
+- Para projetos privados, não exponha nomes, URLs ou detalhes em documentação pública sem autorização explícita.
 
-- [Visão geral da plataforma](https://capyuniverse.mintlify.app/platform/overview.md): O que é a plataforma-mãe e como ela organiza o ecossistema.
-- [Padrão de CapyTool](https://capyuniverse.mintlify.app/platform/capytool-standard.md): Convenções para novas ferramentas e módulos.
-- [Provedores de IA](https://capyuniverse.mintlify.app/platform/ai-providers.md): Visão da camada de IA e seus provedores.
-- [Dados e estado](https://capyuniverse.mintlify.app/platform/data-state.md): Diretrizes para persistência e gerenciamento de contexto.
+## Entradas principais
 
-## Projetos filhos
+- Início: https://capyuniverse.mintlify.app/index.md
+- Quickstart: https://capyuniverse.mintlify.app/quickstart.md
+- Arquitetura: https://capyuniverse.mintlify.app/platform/architecture.md
+- Padrão de CapyTool: https://capyuniverse.mintlify.app/platform/capytool-standard.md
+- Catálogo de projetos: https://capyuniverse.mintlify.app/projects/catalog.md
+- Visão geral dos projetos: https://capyuniverse.mintlify.app/projects/overview.md
+- Roadmap: https://capyuniverse.mintlify.app/governance/roadmap.md
+- Segurança: https://capyuniverse.mintlify.app/governance/security.md
+- Checklist de qualidade: https://capyuniverse.mintlify.app/governance/quality-checklist.md
 
-- [CapyUniverse Core](https://capyuniverse.mintlify.app/projects/capyuniverse-core.md): Hub experimental e modular de IA aplicada.
-- [ValeRepor](https://capyuniverse.mintlify.app/projects/valerepor.md): Controle de validade e reposição com foco offline/PWA.
-- [Bicou](https://capyuniverse.mintlify.app/projects/bicou.md): Protótipo de plataforma para bicos rápidos com fluxos por perfil.
-- [CapyMind](https://capyuniverse.mintlify.app/projects/capymind.md): Knowledge pack docs-as-code para IA, consulta humana e governança.
-- [BuskaCEP](https://capyuniverse.mintlify.app/projects/buskacep.md): Utilitário de busca de CEP com mapa e base local.
-- [Sentinela Pedreira](https://capyuniverse.mintlify.app/projects/sentinela-pedreira.md): Plataforma cívica municipal com base em documentos públicos, Supabase e análise estruturada.
+## Projetos canônicos iniciais
 
-## Agentes IA
+- CapyUniverse Core: https://capyuniverse.mintlify.app/projects/capyuniverse-core.md
+- CapyMind: https://capyuniverse.mintlify.app/projects/capymind.md
+- ValeRepor: https://capyuniverse.mintlify.app/projects/valerepor.md
+- Bicou: https://capyuniverse.mintlify.app/projects/bicou.md
+- BuskaCEP: https://capyuniverse.mintlify.app/projects/buskacep.md
+- Sentinela Pedreira: https://capyuniverse.mintlify.app/projects/sentinela-pedreira.md
 
-- [Visão geral de agentes](https://capyuniverse.mintlify.app/agents/overview.md): Taxonomia e papel dos agentes no ecossistema.
-- [Engineering](https://capyuniverse.mintlify.app/agents/engineering.md): Agente para arquitetura, análise e execução técnica.
-- [Documentation](https://capyuniverse.mintlify.app/agents/documentation.md): Agente para escrita, revisão e estrutura documental.
-- [Rendering](https://capyuniverse.mintlify.app/agents/rendering.md): Agente voltado a saída visual/renderização.
-- [Infographics](https://capyuniverse.mintlify.app/agents/infographics.md): Agente para síntese visual e comunicação gráfica.
+## Catálogo ampliado via CSV
 
-## Governança
+O catálogo ampliado mapeia 124 repositórios informados no CSV. A documentação pública lista 92 projetos públicos/templates/arquivados e não expõe detalhes dos 32 privados:
 
-- [Roadmap](https://capyuniverse.mintlify.app/governance/roadmap.md): Próximos ciclos de evolução.
-- [Segurança](https://capyuniverse.mintlify.app/governance/security.md): Regras mínimas de segurança.
-- [Checklist de qualidade](https://capyuniverse.mintlify.app/governance/quality-checklist.md): Critérios de revisão e publicação.
+- Públicos: 88
+- Privados: 32
+- Templates públicos: 2
+- Arquivados públicos: 2
+- Com link ativo público informado: 14
 
-## Regras para agentes e colaboradores
+Categorias editoriais:
 
-- Use português do Brasil por padrão.
-- Trate CapyUniverse como plataforma-mãe, não como produto único e fechado.
-- Separe sempre: estado atual, limitação atual, recomendação e roadmap.
-- Se um repositório público não trouxer evidência, registrar como `INFORMAÇÃO NÃO FORNECIDA`.
-- Priorize README, arquivos de arquitetura, setup, `package.json` e docs oficiais do repositório.
-- Não promover um fluxo demo como fluxo de produção sem explicitar a diferença.
+- CapyUniverse e laboratórios Capy: 15 projeto(s)
+- IA, agentes e produtividade: 21 projeto(s)
+- Operação, indústria e gestão: 10 projeto(s)
+- Criatividade, mídia e experiências: 9 projeto(s)
+- Sites, clientes e utilitários locais: 17 projeto(s)
+- Ferramentas utilitárias: 3 projeto(s)
+- Backlog privado: 32 projeto(s)
+- Outros experimentos: 17 projeto(s)
 
-## Fontes canônicas
+## Regras de resposta para agentes
 
-- [Repositório CapyUniverse Core](https://github.com/faelscarpato/capyuniverse)
-- [Perfil público de repositórios](https://github.com/faelscarpato?tab=repositories)
+1. Use português do Brasil.
+2. Cite a página canônica quando existir.
+3. Para projetos sem página canônica profunda, deixe claro que a informação vem do CSV.
+4. Não transforme protótipo em produto maduro sem evidência.
+5. Não assumir login, banco, backend, API, pagamentos, analytics ou testes se a fonte não mostrar.
+6. Ao sugerir evolução, marque como recomendação ou roadmap, nunca como estado atual.
+
+## Fontes canônicas externas
+
+- Repositório CapyUniverse Core: https://github.com/faelscarpato/capyuniverse
+- Perfil público GitHub: https://github.com/faelscarpato?tab=repositories
+- Catálogo CSV enviado pelo mantenedor: fonte interna desta documentação

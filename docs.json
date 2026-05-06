@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "CapyUniverse Docs",
   "colors": {
-    "primary": "#6E56CF",
-    "light": "#22C7A9",
-    "dark": "#A78BFA"
+    "primary": "#8B5CF6",
+    "light": "#14B8A6",
+    "dark": "#C084FC"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -44,15 +44,46 @@
         "tab": "Projetos filhos",
         "groups": [
           {
-            "group": "Catálogo do ecossistema",
+            "group": "Projetos principais",
             "pages": [
               "projects/overview",
               "projects/capyuniverse-core",
+              "projects/capymind",
               "projects/valerepor",
               "projects/bicou",
-              "projects/capymind",
               "projects/buskacep",
               "projects/sentinela-pedreira"
+            ]
+          },
+          {
+            "group": "Catálogo ampliado",
+            "pages": [
+              "projects/catalog",
+              "projects/ai-productivity",
+              "projects/operations-industry",
+              "projects/creative-media",
+              "projects/local-sites",
+              "projects/private-backlog"
+            ]
+          },
+          {
+            "group": "Projetos adicionais em destaque",
+            "pages": [
+              "projects/repositories/wordgalaxy",
+              "projects/repositories/capyops",
+              "projects/repositories/capyviewport",
+              "projects/repositories/capyscar",
+              "projects/repositories/genios",
+              "projects/repositories/capyroom",
+              "projects/repositories/davinci",
+              "projects/repositories/capycontrato",
+              "projects/repositories/capyvision",
+              "projects/repositories/capychart",
+              "projects/repositories/fullsearchai",
+              "projects/repositories/aura",
+              "projects/repositories/capyflow",
+              "projects/repositories/capyide",
+              "projects/repositories/capyai-lite"
             ]
           }
         ]
@@ -106,21 +137,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "App principal",
-          "href": "https://faelscarpato.github.io/capyuniverse/",
-          "icon": "sparkles"
-        },
-        {
-          "anchor": "GitHub Rafael",
-          "href": "https://github.com/faelscarpato",
-          "icon": "github"
-        }
-      ]
-    }
+    ]
   },
   "navbar": {
     "links": [
@@ -129,14 +146,18 @@
         "href": "https://github.com/faelscarpato/capyuniverse"
       },
       {
-        "label": "Projetos no GitHub",
+        "label": "Catálogo",
+        "href": "/projects/catalog"
+      },
+      {
+        "label": "GitHub",
         "href": "https://github.com/faelscarpato?tab=repositories"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Abrir CapyUniverse",
-      "href": "https://faelscarpato.github.io/capyuniverse/"
+      "href": "https://capyuniverse.pages.dev"
     }
   },
   "contextual": {
@@ -159,35 +180,77 @@
       {
         "header": "Começar",
         "items": [
-          { "label": "Início", "href": "/" },
-          { "label": "Quickstart", "href": "/quickstart" },
-          { "label": "Arquitetura", "href": "/platform/architecture" }
+          {
+            "label": "Início",
+            "href": "/"
+          },
+          {
+            "label": "Quickstart",
+            "href": "/quickstart"
+          },
+          {
+            "label": "Arquitetura",
+            "href": "/platform/architecture"
+          }
         ]
       },
       {
         "header": "Projetos",
         "items": [
-          { "label": "Visão geral", "href": "/projects/overview" },
-          { "label": "ValeRepor", "href": "/projects/valerepor" },
-          { "label": "Bicou", "href": "/projects/bicou" },
-          { "label": "Sentinela Pedreira", "href": "/projects/sentinela-pedreira" }
+          {
+            "label": "Visão geral",
+            "href": "/projects/overview"
+          },
+          {
+            "label": "Catálogo completo",
+            "href": "/projects/catalog"
+          },
+          {
+            "label": "CapyMind",
+            "href": "/projects/capymind"
+          },
+          {
+            "label": "ValeRepor",
+            "href": "/projects/valerepor"
+          }
         ]
       },
       {
-        "header": "IA e governança",
+        "header": "Governança",
         "items": [
-          { "label": "Agentes IA", "href": "/agents/overview" },
-          { "label": "Roadmap", "href": "/governance/roadmap" },
-          { "label": "Segurança", "href": "/governance/security" },
-          { "label": "llms.txt", "href": "/llms.txt" }
+          {
+            "label": "Roadmap",
+            "href": "/governance/roadmap"
+          },
+          {
+            "label": "Segurança",
+            "href": "/governance/security"
+          },
+          {
+            "label": "Checklist",
+            "href": "/governance/quality-checklist"
+          },
+          {
+            "label": "llms.txt",
+            "href": "/llms.txt"
+          }
         ]
       },
       {
         "header": "Externos",
         "items": [
-          { "label": "App principal", "href": "https://faelscarpato.github.io/capyuniverse/" },
-          { "label": "Repositório Core", "href": "https://github.com/faelscarpato/capyuniverse" },
-          { "label": "Perfil GitHub", "href": "https://github.com/faelscarpato" }
+          {
+            "label": "App principal",
+            "href": "https://capyuniverse.pages.dev"
+          },
+          {
+            "label": "Repositório Core",
+            "href": "https://github.com/faelscarpato/capyuniverse"
+          },
+          {
+            "label": "Perfil GitHub",
+            "href": "https://github.com/faelscarpato"
+          }
         ]
       }
     ]

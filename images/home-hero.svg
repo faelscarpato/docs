@@ -1,0 +1,25 @@
+<svg width="1600" height="860" viewBox="0 0 1600 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa do ecossistema CapyUniverse">
+  <defs>
+    <radialGradient id="g1" cx="50%" cy="45%" r="58%"><stop offset="0" stop-color="#7C3AED"/><stop offset="0.55" stop-color="#2563EB"/><stop offset="1" stop-color="#020617"/></radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111827"/><stop offset="1" stop-color="#020617"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22D3EE"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="860" rx="44" fill="#020617"/>
+  <circle cx="800" cy="420" r="360" fill="url(#g1)" opacity="0.42" filter="url(#glow)"/>
+  <g opacity="0.45"><path d="M160 210H1440M160 430H1440M160 650H1440M300 100V760M560 100V760M820 100V760M1080 100V760M1340 100V760" stroke="#334155" stroke-width="1"/></g>
+  <g stroke="url(#line)" stroke-width="4" opacity="0.9">
+    <path d="M800 430L405 245"/><path d="M800 430L1190 245"/><path d="M800 430L402 620"/><path d="M800 430L1195 620"/><path d="M800 430V150"/><path d="M800 430V710"/>
+  </g>
+  <g filter="url(#glow)"><circle cx="800" cy="430" r="128" fill="url(#g1)"/><circle cx="800" cy="430" r="128" stroke="#E0E7FF" stroke-opacity=".25" stroke-width="2"/></g>
+  <text x="800" y="410" text-anchor="middle" fill="white" font-size="46" font-family="Inter,Segoe UI,Arial" font-weight="800">CapyUniverse</text>
+  <text x="800" y="462" text-anchor="middle" fill="#DBEAFE" font-size="23" font-family="Inter,Segoe UI,Arial" font-weight="700">Core • Agentes • Projetos • Conhecimento</text>
+  <g font-family="Inter,Segoe UI,Arial">
+    <g><rect x="210" y="160" width="270" height="150" rx="34" fill="url(#card)" stroke="#22D3EE" stroke-width="4"/><text x="345" y="226" text-anchor="middle" fill="white" font-size="31" font-weight="800">CapyTools</text><text x="345" y="264" text-anchor="middle" fill="#A5F3FC" font-size="18" font-weight="700">ferramentas modulares</text></g>
+    <g><rect x="1130" y="160" width="270" height="150" rx="34" fill="url(#card)" stroke="#A78BFA" stroke-width="4"/><text x="1265" y="226" text-anchor="middle" fill="white" font-size="31" font-weight="800">Agentes IA</text><text x="1265" y="264" text-anchor="middle" fill="#DDD6FE" font-size="18" font-weight="700">funções especializadas</text></g>
+    <g><rect x="210" y="555" width="270" height="150" rx="34" fill="url(#card)" stroke="#F97316" stroke-width="4"/><text x="345" y="620" text-anchor="middle" fill="white" font-size="31" font-weight="800">Produtos</text><text x="345" y="658" text-anchor="middle" fill="#FED7AA" font-size="18" font-weight="700">projetos filhos</text></g>
+    <g><rect x="1130" y="555" width="270" height="150" rx="34" fill="url(#card)" stroke="#34D399" stroke-width="4"/><text x="1265" y="620" text-anchor="middle" fill="white" font-size="31" font-weight="800">Memória</text><text x="1265" y="658" text-anchor="middle" fill="#BBF7D0" font-size="18" font-weight="700">docs, contexto e IA</text></g>
+    <g><rect x="665" y="80" width="270" height="120" rx="34" fill="url(#card)" stroke="#FACC15" stroke-width="4"/><text x="800" y="132" text-anchor="middle" fill="white" font-size="28" font-weight="800">Governança</text><text x="800" y="166" text-anchor="middle" fill="#FEF08A" font-size="17" font-weight="700">padrões e evolução</text></g>
+    <g><rect x="665" y="660" width="270" height="120" rx="34" fill="url(#card)" stroke="#FB7185" stroke-width="4"/><text x="800" y="713" text-anchor="middle" fill="white" font-size="28" font-weight="800">Roadmap</text><text x="800" y="747" text-anchor="middle" fill="#FFE4E6" font-size="17" font-weight="700">local → produto</text></g>
+  </g>
+</svg>
