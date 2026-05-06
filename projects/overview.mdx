@@ -1,24 +1,53 @@
 ---
-title: "Catálogo de projetos filhos"
+title: "Projetos filhos"
 description: "Mapa dos projetos conectados ao ecossistema CapyUniverse, com status, papel e fontes canônicas."
 icon: "boxes-stacked"
 keywords: ["capyuniverse", "projetos", "catálogo", "ecossistema"]
 ---
 
-Os projetos filhos são produtos, utilitários, bases de conhecimento ou plataformas conectadas ao CapyUniverse. Esta página separa **estado verificado**, **maturidade editorial** e **lacunas conhecidas** para evitar que ideias de roadmap sejam confundidas com recursos prontos.
+Os projetos filhos são produtos, utilitários, bases de conhecimento, agentes, experimentos ou plataformas conectadas ao CapyUniverse.
 
-## Matriz atual
+A regra central é simples: **não completar lacunas por imaginação**. Se o repositório, README, CSV ou documentação fornecida não provar uma informação, ela deve aparecer como **INFORMAÇÃO NÃO FORNECIDA**.
 
-| Projeto | Papel no universo | Status | Maturidade | Fonte principal |
-| --- | --- | --- | --- | --- |
-| [CapyUniverse Core](/projects/capyuniverse-core) | Plataforma-mãe e hub experimental | Experimental | Exploratória | README + arquitetura |
-| [ValeRepor](/projects/valerepor) | Produto operacional para supermercados | Em evolução | Protótipo funcional | README + Cloudflare Pages |
-| [Bicou](/projects/bicou) | Protótipo de fluxo de bicos rápidos | Demo | Protótipo funcional | README + teste manual |
-| [CapyMind](/projects/capymind) | Knowledge pack e memória documental | Ativo | Operacional | README + scripts |
-| [BuskaCEP](/projects/buskacep) | Utilitário local de CEPs de Pedreira-SP | Ativo | Protótipo vertical | README + package |
-| [Sentinela Pedreira](/projects/sentinela-pedreira) | Inteligência cívica municipal | Em evolução | Avançada | README + arquitetura + setup |
+## Projetos prioritários
+
+| Projeto | Papel no universo | Status documental | Fonte principal |
+| --- | --- | --- | --- |
+| [CapyUniverse Core](/projects/capyuniverse-core) | Plataforma-mãe e hub experimental | Página canônica | Repositório público + docs existentes |
+| [CapyMind](/projects/capymind) | Base de conhecimento / memória documental | Página canônica | Repositório público + docs existentes |
+| [ValeRepor](/projects/valerepor) | Produto operacional para supermercados | Página canônica | Repositório público + README |
+| [Bicou](/projects/bicou) | Protótipo de marketplace de bicos | Página canônica | Repositório público + README |
+| [BuskaCEP](/projects/buskacep) | Utilitário local de CEPs de Pedreira-SP | Página canônica | Repositório público + CSV |
+| [Sentinela Pedreira](/projects/sentinela-pedreira) | Inteligência cívica municipal | Página canônica | Repositório público + docs existentes |
+
+## Catálogo ampliado via CSV
+
+O CSV enviado mapeou **124 repositórios**. Destes, **92** são públicos/templates/arquivados públicos e **32** foram preservados fora do catálogo público.
+
+<CardGroup cols={3}>
+  <Card title="Catálogo completo" icon="table-list" href="/projects/catalog">
+    Lista consolidada com nome, acesso, linguagem, descrição e links informados.
+  </Card>
+  <Card title="IA e produtividade" icon="bot" href="/projects/ai-productivity">
+    Projetos ligados a IA, agentes, chat, análise, contratos, dashboards e produtividade.
+  </Card>
+  <Card title="Operação e indústria" icon="industry" href="/projects/operations-industry">
+    Projetos de gestão, fábrica, pausas, ausência, MES e sistemas operacionais.
+  </Card>
+  <Card title="Criatividade e mídia" icon="wand-magic-sparkles" href="/projects/creative-media">
+    Jogos, imagem, fotografia, experiências criativas e ferramentas visuais.
+  </Card>
+  <Card title="Sites e utilitários locais" icon="globe" href="/projects/local-sites">
+    Sites de clientes, páginas locais, ferramentas públicas e utilitários simples.
+  </Card>
+  <Card title="Backlog privado" icon="lock" href="/projects/private-backlog">
+    Projetos privados aparecem apenas com os dados declarados no CSV.
+  </Card>
+</CardGroup>
 
 ## Critério de classificação
+
+A classificação por categoria é editorial e serve para navegação. Ela foi derivada de nome, descrição, linguagem e acesso informados no CSV.
 
 | Tipo | Quando usar |
 | --- | --- |
@@ -27,19 +56,8 @@ Os projetos filhos são produtos, utilitários, bases de conhecimento ou platafo
 | Utilitário público | Resolve problema local ou comunitário |
 | Knowledge base | Organiza conhecimento para humanos e IA |
 | Laboratório | Testa tecnologia, UX ou automação |
+| Backlog privado | Existe no CSV, mas não deve ter detalhes inventados |
 
-## Regra documental
-
-Cada página de projeto deve responder:
-
-- O que é o projeto na prática.
-- Qual papel ele ocupa dentro do CapyUniverse.
-- O que existe hoje, com base no repositório público.
-- Qual stack foi verificada.
-- Como rodar, quando o repositório informa.
-- Quais limitações e riscos estão explícitos.
-- O que ainda não foi fornecido.
-
-<Note>
-  Quando uma informação não aparece nas fontes públicas consultadas, a página deve registrar **INFORMAÇÃO NÃO FORNECIDA** em vez de completar a lacuna por inferência.
-</Note>
+<Warning>
+  Repositórios privados ou sem descrição suficiente não devem receber funcionalidades, stack detalhada ou roadmap por inferência. A página deve indicar o que falta consultar.
+</Warning>
