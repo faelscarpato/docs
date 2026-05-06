@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "CapyUniverse Docs",
   "colors": {
-    "primary": "#8B5CF6",
-    "light": "#14B8A6",
-    "dark": "#C084FC"
+    "primary": "#0665c2",
+    "light": "#00a1ff",
+    "dark": "#2f0082"
   },
   "favicon": "/favicon.svg",
   "logo": {
@@ -254,5 +254,6 @@
         ]
       }
     ]
-  }
+  },
+  "description": "Hub experimental e modular de IA aplicada, com ferramentas web, camada de serviços LLM e persistência leve no navegador"
 }
